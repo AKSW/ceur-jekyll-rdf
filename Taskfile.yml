@@ -1,0 +1,16 @@
+version: '3'
+
+tasks:
+  sources:get-vol-xxx:
+    - |
+      echo \
+      https://ceur-ws.org/Vol-XXX/index.html \
+      https://ceur-ws.org/ceur-ws.css \
+      https://ceur-ws.org/ceurws-bg.png \
+      https://ceur-ws.org/CEUR-WS-logo.png \
+      https://ceur-ws.org/cc-by_100x35.png \
+      https://ceur-ws.org/ceurws-bullet-6x12.png \
+      https://ceur-ws.org/favicon.ico \
+      https://ceur-ws.org/CEUR-WS-logo-blue.png \
+      | xargs -n 1 curl -O
+    - mv index.html Vol-XXX/index.html
