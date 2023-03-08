@@ -362,7 +362,7 @@ Summary: There were <span class="CEURSUBMITTEDPAPERS">{{CEURSUBMITTEDPAPERS}}</s
 {%- assign CEURTITLE = paper.entity | rdf_property: "dct:title" -%}
 {%- endunless -%}
 {%- assign CEURPAGES = "" -%}
-{%- assign authors = paper.entity | rdf_property: "schema:performer" | rdf_container -%}
+{%- assign authors = paper.entity | rdf_container: "schema:performer" -%}
 {%- unless authors.first -%}
 {%- assign authors = paper.entity | rdf_property: "schema:performer" | rdf_collection -%}
 {%- endunless -%}
@@ -370,13 +370,18 @@ Summary: There were <span class="CEURSUBMITTEDPAPERS">{{CEURSUBMITTEDPAPERS}}</s
 {%- assign authors = paper.entity | rdf_property: "schema:performer", nil, true -%}
 {%- endunless -%}
 {%- assign track = "" -%}
-{% assign isKeynote = paper.entity | rdf_property: "rdf:type", nil, true | contains: keynote_type %}
-{% assign isInvited = paper.entity | rdf_property: "rdf:type", nil, true | contains: invited_type %}
-{%- if isKeynote -%}
+{% assign typelist = paper.entity | rdf_property: "rdf:type", nil, true %}
+{% assign isKeynote = false %}
+{% assign isInvited = false %}
+{% for type in typelist %}
+{% if type == keynote_type%}
 {%- assign track = " (keynote)" -%}
-{%- elif isInvited -%}
+{% break %}
+{% elsif type == invited_type %}
 {%- assign track = " (invited paper)" -%}
-{%- endif -%}
+{% break %}
+{% endif %}
+{% endfor %}
 <li id="paper5"><a href="paper5.pdf">
 <span class="CEURTITLE">{{CEURTITLE | umlaut_escape}}{{track}}</span></a>
 {%- comment -%}<span class="CEURPAGES">{{CEURPAGES}}</span>{%- endcomment -%}
