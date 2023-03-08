@@ -1,3 +1,118 @@
+---
+rdf_prefix_path: "_data/prefixes.sparql"
+---
+{%- assign rootResource = site.rootResource | rdf_get -%}
+{%- assign development = true -%}
+
+{%- comment -%}
+The following variables need to be adapted by you:
+JJJJ=Year in which the final papers of the proceedings were produced
+YYYY=Year in which the workshop took place (in most cases YYYY=JJJJ)
+NNNN=Acronym of the Workshop
+DD=Day of submission of the workshop proceedings to CEUR-WS.org
+MM=Month of submission of the workshop proceedings (MM=01,02,03,04,05,06,07,08,09,10,11,12)
+
+CEURLANG: the main language of the proceedings (eng, deu, fra, spa, rus, ita, por, ...)
+       according to ISO 639-2/T (http://en.wikipedia.org/wiki/List_of_ISO_639-2_codes)
+CEURVOLNR: the volume number of the proceedings **set by us**
+CEURPUBYEAR: the year in which the proceedings volume was created (see also YYYY)
+CEURURN: the URN of the volume **set by us**
+CEURVOLACRONYM: the acronym of the workshop plus YYYY (year of the workshop)
+       the acronym may contain '-'; between acronym and year is either a blank
+       or a '-'. The year is exactly 4 digits, e.g. 2012
+CEURVOLTITLE: the title of the proceedings
+CEURFULLTITLE: the long title of the proceedings
+CEURCOLOCATED: the acronym and year of the conference where this workshop was
+    co-located with; use "NONE" if the workshop was not co-located with a conference
+CEURLOCTIME: the place and time when the workshop took place
+CEURVOLEDITOR: full name of an editor of the proceedings
+CEURTOC: indicator for the start of the table of contents
+CEURSESSION (optional): separator for a section within the table of contents
+CEURTITLE: title of a paper within the table of contents
+CEURPAGES (optional): numerical range of pages of a paper, e.g. 10-20
+CEURAUTHOR: one author of a paper (use full names, do not include affiliations);
+       multiple authors should be separated by commas
+CEURPUBDATE: the precise date of publication at CEUR-WS.org **set by us**
+CEURSUBMITTEDPAPERS: the total number of papers submitted for peer review to this volume
+CEURACCEPTEDPAPERS: the total number of accepted peer-reviewed papers (excl. invited papers, keynotes etc)
+CEURACCEPTEDREGULARPAPERS: the number of regular-size accepted peer-reviewed papers (optional)
+CEURACCEPTEDSHORTPAPERS: the number of short accepted peer-reviewed papers  (optional)
+{%- endcomment -%}
+
+{%- assign workshop = rootResource -%}
+{%- assign proceedings = workshop | rdf_property: "vivo:hasProceedings" -%}
+{%- assign superEvent = workshop | rdf_inverse_property: "schema:subEvent" -%}
+
+{%- assign JJJJ = proceedings | rdf_property: "dct:dateCopyrighted" | date: "%Y" -%}
+{%- assign YYYY = workshop | rdf_property: "dct:date" | date: "%Y" -%}
+{%- assign NNNN = workshop | rdf_property: "ceur:acronym" -%}
+{%- assign DD = proceedings | rdf_property: "dct:dateSubmitted" | date: "%d" -%}
+{%- assign MM = proceedings | rdf_property: "dct:dateSubmitted" | date: "%m" -%}
+
+{%- assign label = workshop | rdf_property: "rdfs:label" -%}
+{%- assign CEURLANG = proceedings | rdf_property: "dct:language" | rdf_property: "lvont:iso6392TCode" -%}
+{%- assign CEURPUBYEAR = JJJJ -%}
+{%- assign CEURWSYEAR = YYYY -%}
+{%- assign CEURVOLACRONYM_DEFAULT = NNNN | append: " " | append: YYYY -%}
+{%- assign CEURVOLACRONYM = proceedings | rdf_property: "ceur:volacronym" | default: CEURVOLACRONYM_DEFAULT -%}
+{%- assign CEURVOLTITLE =  proceedings | rdf_property: "ceur:voltitle" -%}
+{%- assign CEURFULLTITLE = label | prepend: "Proceedings of the " -%}
+{%- if superEvent -%}
+{%- assign CEURCOLOCATED = superEvent | rdf_property: "ceur:acronym" -%}
+{%- else -%}
+{%- assign CEURCOLOCATED = "NONE" -%}
+{%- endif -%}
+{%- assign location = workshop | rdf_property: "schema:location" -%}
+{%- unless location -%}
+{%- assign location = superEvent | rdf_property: "schema:location" -%}
+{%- endunless -%}
+{%- assign country = location | rdf_property: "schema:addressCountry" -%}
+{%- assign locality = location | rdf_property: "schema:addressLocality" -%}
+{%- assign CEURLOCTIME = workshop | rdf_property: "dct:date" | prepend: ", " | prepend: country | prepend: ", " | prepend: locality -%}
+
+{%- assign editors = paper.entity | rdf_container: "schema:organizer" -%}
+{%- unless editors.first -%}
+{%- assign editors = paper.entity | rdf_collection: "schema:organizer"  -%}
+{%- endunless -%}
+{%- unless editors.first -%}
+{%- assign editors = paper.entity | rdf_property: "schema:organizer", nil, true -%}
+{%- endunless -%}
+{%- for editor in editors -%}
+{%- assign CEURVOLEDITOR = editor | rdf_property: "foaf:name" -%}
+{%- endfor -%}
+
+{%- capture subevent_query -%}
+select distinct ?entity {
+  ?resourceUri schema:subEvent ?entity .
+  ?entity schema:startTime ?time .
+} order by ?time
+{%- endcapture -%}
+
+{%- assign sessions = workshop | sparql_query: subevent_query -%}
+
+{%- for session in sessions -%}
+{%- assign CEURSESSION = session.entity | rdf_property: "dct:title" -%}
+{%- assign papers = session.entity | sparql_query: subevent_query -%}
+{%- for paper in papers -%}
+{%- assign CEURTITLE = paper.entity | rdf_property: "dct:title" -%}
+{%- assign CEURPAGES = "" -%}
+{%- assign authors = paper.entity | rdf_container: "schema:performer" -%}
+{%- unless authors.first -%}
+{%- assign authors = paper.entity | rdf_collection: "schema:performer"  -%}
+{%- endunless -%}
+{%- unless authors.first -%}
+{%- assign authors = paper.entity | rdf_property: "schema:performer", nil, true -%}
+{%- endunless -%}
+{%- for author in authors -%}
+{%- assign CEURAUTHOR = author | rdf_property: "foaf:name" -%}
+{%- endfor -%}
+{%- endfor -%}
+{%- endfor -%}
+
+{%- assign CEURSUBMITTEDPAPERS = workshop | rdf_property: "ceur:submittedpapers" -%}
+{%- assign CEURACCEPTEDPAPERS = workshop | rdf_property: "ceur:acceptedpapers" -%}
+{%- assign CEURACCEPTEDREGULARPAPERS = workshop | rdf_property: "ceur:acceptedregularpapers" -%}
+{%- assign CEURACCEPTEDSHORTPAPERS = workshop | rdf_property: "ceur:acceptedshortpapers" -%}
 <!DOCTYPE html>
 <!-- CEURVERSION=2020-07-09 -->
 <html lang="en">
@@ -5,10 +120,11 @@
 <meta http-equiv="Content-type" content="text/html;charset=utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <link rel="stylesheet" type="text/css" href="../ceur-ws.css">
-<title>CEUR-WS.org/Vol-XXX - Workshop on Publishing Papers with CEUR-WS YYYY</title>
+<title>CEUR-WS.org/Vol-XXX - {{ label }}</title>
 </head>
 <!--CEURLANG=eng -->
 <body>
+{% if development %}
 <pre># Editing instructions
 # The following variables need to be adapted by you:
 # JJJJ=Year in which the final papers of the proceedings were produced
@@ -30,20 +146,20 @@
 # Some elements are tagged with a "class=CEUR..." clause. Be careful to maintain these tags!
 # They are used both for formatting purposes and for identifying bibliographic elements.
 # The CEUR class tags are as follows:
-#          CEURLANG: the main language of the proceedings (eng, deu, fra, spa, rus, ita, por, ...)
+#          CEURLANG: ({{CEURLANG}}) the main language of the proceedings (eng, deu, fra, spa, rus, ita, por, ...)
 #                 according to ISO 639-2/T (http://en.wikipedia.org/wiki/List_of_ISO_639-2_codes)
 #          CEURVOLNR: the volume number of the proceedings **set by us**
-#          CEURPUBYEAR: the year in which the proceedings volume was created (see also YYYY)
+#          CEURPUBYEAR: ({{CEURPUBYEAR}}) the year in which the proceedings volume was created (see also YYYY ({{CEURWSYEAR}}))
 #          CEURURN: the URN of the volume **set by us**
-#          CEURVOLACRONYM: the acronym of the workshop plus YYYY (year of the workshop)
+#          CEURVOLACRONYM: ({{CEURVOLACRONYM}}) the acronym of the workshop plus YYYY (year of the workshop)
 #                 the acronym may contain '-'; between acronym and year is either a blank
 #                 or a '-'. The year is exactly 4 digits, e.g. 2012
-#          CEURVOLTITLE: the title of the proceedings
-#          CEURFULLTITLE: the long title of the proceedings
-#          CEURCOLOCATED: the acronym and year of the conference where this workshop was
+#          CEURVOLTITLE: ({{CEURVOLTITLE}}) the title of the proceedings
+#          CEURFULLTITLE: ({{CEURFULLTITLE}}) the long title of the proceedings
+#          CEURCOLOCATED: ({{CEURCOLOCATED}}) the acronym and year of the conference where this workshop was
 #              co-located with; use "NONE" if the workshop was not co-located with a conference
-#          CEURLOCTIME: the place and time when the workshop took place
-#          CEURVOLEDITOR: full name of an editor of the proceedings
+#          CEURLOCTIME: ({{CEURLOCTIME}}) the place and time when the workshop took place
+#          CEURVOLEDITOR: ({{CEURVOLEDITOR}}) full name of an editor of the proceedings
 #          CEURTOC: indicator for the start of the table of contents
 #          CEURSESSION (optional): separator for a section within the table of contents
 #          CEURTITLE: title of a paper within the table of contents
@@ -51,13 +167,13 @@
 #          CEURAUTHOR: one author of a paper (use full names, do not include affiliations);
 #                 multiple authors should be separated by commas
 #          CEURPUBDATE: the precise date of publication at CEUR-WS.org **set by us**
-#          CEURSUBMITTEDPAPERS: the total number of papers submitted for peer review to this volume
-#          CEURACCEPTEDPAPERS: the total number of accepted peer-reviewed papers (excl. invited papers, keynotes etc)
-#          CEURACCEPTEDREGULARPAPERS: the number of regular-size accepted peer-reviewed papers (optional)
-#          CEURACCEPTEDSHORTPAPERS: the number of short accepted peer-reviewed papers  (optional)
+#          CEURSUBMITTEDPAPERS: ({{CEURSUBMITTEDPAPERS}}) the total number of papers submitted for peer review to this volume
+#          CEURACCEPTEDPAPERS: ({{CEURACCEPTEDPAPERS}}) the total number of accepted peer-reviewed papers (excl. invited papers, keynotes etc)
+#          CEURACCEPTEDREGULARPAPERS: ({{CEURACCEPTEDREGULARPAPERS}}) the number of regular-size accepted peer-reviewed papers (optional)
+#          CEURACCEPTEDSHORTPAPERS: ({{CEURACCEPTEDSHORTPAPERS}}) the number of short accepted peer-reviewed papers  (optional)
 #
 #</pre>
-
+{% endif %}
 
 
 <table style="border: 0; border-spacing: 0; border-collapse: collapse; width: 95%">
@@ -81,6 +197,7 @@ Creative Commons License Attribution 4.0 International
 </tbody></table>
 
 <hr>
+{% if development %}
 <pre># Instructions for the Proceedings Title
 # The layout of the proceedings title can be adapted to your needs.
 # Make sure to include all proceedings editors and their affiliations.
@@ -89,6 +206,7 @@ Creative Commons License Attribution 4.0 International
 # copyright to the logo. Do NOT include logos of companies, products,
 # or sponsors.
 #</pre>
+{% endif %}
 
 <br><br><br>
 
