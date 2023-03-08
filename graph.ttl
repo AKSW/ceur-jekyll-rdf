@@ -335,7 +335,7 @@ We invite contributions of novel results and ongoing work as well as position pa
     schema:logo <logo.png> ;
     schema:organizer <#Team> ;
     schema:recordedIn <https://www.youtube.com/watch?v=NA5-XYX5Kbo> ;
-    schema:subEvent <#programm-session-1>, <#programm-session-2>, <#programm-session-3>, <#programm-session-4>, <#programm-session-5>, <#programm-talk-1>, <#programm-talk-10>, <#programm-talk-13>, <#programm-talk-15>, <#programm-talk-19>, <#programm-talk-24>, <#programm-talk-25>, <#programm-talk-5>, <#programm-talk-7> ;
+    schema:subEvent <#programm-session-1>, <#programm-session-2>, <#programm-session-3>, <#programm-session-4>, <#programm-session-5>, <#programm-talk-10>, <#programm-talk-15>, <#programm-talk-25>, <#programm-talk-26>, <#programm-talk-29>, <#programm-talk-5> ;
     vivo:hasProceedings <#proceedings> ;
     a bibo:Conference, schema:Event, foaf:Document, <https://vocab.eccenca.com/di/Dataset> ;
     rdfs:label "International Workshop on Data-driven Resilience Research 2022"@de, "International Workshop on Data-driven Resilience Research 2022"@en ;
@@ -448,11 +448,148 @@ We invite contributions of novel results and ongoing work as well as position pa
     a bibo:Proceedings, foaf:Document ;
     ceur:voltitle "Data-driven Resilience Research 2022"@en .
 
+<#programm-authors-1>
+    rdf:_1 dw:AngelieKraft ;
+    rdf:_2 aksw:RicardoUsbeck ;
+    a rdfs:Class .
+
+<#programm-authors-10>
+    a rdfs:Class .
+
+<#programm-authors-11>
+    rdf:_1 dw:EvaHoerster ;
+    a rdfs:Class .
+
+<#programm-authors-12>
+    rdf:_1 dw:JohannLoempcke ;
+    rdf:_2 dw:MartinSchneider ;
+    a rdfs:Class .
+
+<#programm-authors-13>
+    rdf:_1 dw:SmithaHaridasan ;
+    rdf:_2 dw:AjitaRattani ;
+    rdf:_3 dw:ZelalemDemissie ;
+    rdf:_4 dw:AtriDutta ;
+    a rdfs:Class .
+
+<#programm-authors-14>
+    rdf:_1 dw:SaideshwarKota ;
+    rdf:_2 dw:SmithaHaridasan ;
+    rdf:_3 dw:AjitaRattani ;
+    rdf:_4 dw:AaronBowen ;
+    rdf:_5 dw:GlynRimmington ;
+    rdf:_6 dw:AtriDutta ;
+    a rdfs:Class .
+
+<#programm-authors-15>
+    a rdfs:Class .
+
+<#programm-authors-16>
+    rdf:_1 dw:HansGertGraebe ;
+    a rdfs:Class .
+
+<#programm-authors-17>
+    rdf:_1 dw:AgnesMasipGomez ;
+    rdf:_2 dw:MartinHess ;
+    rdf:_3 dw:PhilippUlrich ;
+    rdf:_4 dw:AlbertEckert ;
+    rdf:_5 dw:YushanLiu ;
+    rdf:_6 dw:TheodorIsinger ;
+    rdf:_7 aksw:MichaelMartin ;
+    a rdfs:Class .
+
+<#programm-authors-18>
+    rdf:_1 dw:FelixEngel ;
+    rdf:_2 aksw:SoerenAuer ;
+    a rdfs:Class .
+
+<#programm-authors-19>
+    rdf:_1 dw:FawadKhan ;
+    rdf:_2 dw:FelixEngel ;
+    rdf:_3 dw:NenadKrdzavac ;
+    rdf:_4 aksw:SoerenAuer ;
+    a rdfs:Class .
+
+<#programm-authors-2>
+    rdf:_1 dw:AtriDutta ;
+    a rdfs:Class .
+
+<#programm-authors-20>
+    rdf:_1 aksw:SebastianTramp ;
+    a rdfs:Class .
+
+<#programm-authors-21>
+    rdf:_1 aksw:SabineGruenderFahrer ;
+    a rdfs:Class .
+
+<#programm-authors-22>
+    rdf:_1 aksw:AntoninDelpeuch ;
+    a rdfs:Class .
+
+<#programm-authors-23>
+    rdf:_1 aksw:RoyMeissner ;
+    a rdfs:Class .
+
+<#programm-authors-24>
+    a rdfs:Class .
+
+<#programm-authors-25>
+    a rdfs:Class .
+
+<#programm-authors-26>
+    a rdfs:Class .
+
+<#programm-authors-27>
+    a rdfs:Class .
+
+<#programm-authors-28>
+    a rdfs:Class .
+
+<#programm-authors-29>
+    a rdfs:Class .
+
+<#programm-authors-3>
+    rdf:_1 aksw:NatanaelArndt ;
+    a rdfs:Class .
+
+<#programm-authors-4>
+    rdf:_1 aksw:ClausStadler ;
+    rdf:_2 aksw:SimonBin ;
+    rdf:_3 aksw:LorenzBuehmann ;
+    rdf:_4 aksw:NormanRadtke ;
+    rdf:_5 aksw:KurtJunghanns ;
+    rdf:_6 aksw:SabineGruenderFahrer ;
+    rdf:_7 aksw:MichaelMartin ;
+    a rdfs:Class .
+
+<#programm-authors-5>
+    a rdfs:Class .
+
+<#programm-authors-6>
+    rdf:_1 dw:TomRichardVargis ;
+    rdf:_2 dw:SiavashGhiasvand ;
+    a rdfs:Class .
+
+<#programm-authors-7>
+    rdf:_1 dw:SelinaMudrack ;
+    rdf:_2 dw:TobiasGebel ;
+    a rdfs:Class .
+
+<#programm-authors-8>
+    rdf:_1 dw:AlexanderWillner ;
+    rdf:_2 dw:RichardFigura ;
+    a rdfs:Class .
+
+<#programm-authors-9>
+    rdf:_1 dw:AlexanderWillner ;
+    rdf:_2 dw:RichardFigura ;
+    a rdfs:Class .
+
 <#programm-session-1>
     dct:title "Session I"@de, "Session I"@en ;
     schema:endTime "10:30:00.000"^^xsd:time ;
     schema:location <../venue#Sitzungssaal> ;
-    schema:performer aksw:SebastianTramp ;
+    schema:performer aksw:SebastianTramp, <#programm-authors-20> ;
     schema:startTime "09:15:00.000"^^xsd:time ;
     schema:subEvent <#programm-talk-1>, <#programm-talk-2>, <#programm-talk-3>, <#programm-talk-4> ;
     a schema:Event .
@@ -467,7 +604,7 @@ We invite contributions of novel results and ongoing work as well as position pa
     dct:title "Session II"@de, "Session II"@en ;
     schema:endTime "12:00:00.000"^^xsd:time ;
     schema:location <../venue#Sitzungssaal> ;
-    schema:performer aksw:SabineGruenderFahrer ;
+    schema:performer aksw:SabineGruenderFahrer, <#programm-authors-21> ;
     schema:startTime "11:00:00.000"^^xsd:time ;
     schema:subEvent <#programm-talk-6>, <#programm-talk-7>, <#programm-talk-8>, <#programm-talk-9> ;
     a schema:Event .
@@ -476,7 +613,7 @@ We invite contributions of novel results and ongoing work as well as position pa
     dct:title "Session III"@de, "Session III"@en ;
     schema:endTime "14:30:00.000"^^xsd:time ;
     schema:location <../venue#Sitzungssaal> ;
-    schema:performer aksw:AntoninDelpeuch ;
+    schema:performer aksw:AntoninDelpeuch, <#programm-authors-22> ;
     schema:startTime "13:00:00.000"^^xsd:time ;
     schema:subEvent <#programm-talk-11>, <#programm-talk-12>, <#programm-talk-13>, <#programm-talk-14> ;
     a schema:Event .
@@ -485,7 +622,7 @@ We invite contributions of novel results and ongoing work as well as position pa
     dct:title "Session IV"@de, "Session IV"@en ;
     schema:endTime "15:45:00.000"^^xsd:time ;
     schema:location <../venue#Sitzungssaal> ;
-    schema:performer aksw:RoyMeissner ;
+    schema:performer aksw:RoyMeissner, <#programm-authors-23> ;
     schema:startTime "15:00:00.000"^^xsd:time ;
     schema:subEvent <#programm-talk-16>, <#programm-talk-17>, <#programm-talk-18> ;
     a schema:Event .
@@ -493,6 +630,7 @@ We invite contributions of novel results and ongoing work as well as position pa
 <#programm-session-5>
     dct:title "Invited Contribution from the LSWT2023"@en ;
     schema:endTime "23:15:00.000"^^xsd:time ;
+    schema:performer <#programm-authors-24> ;
     schema:startTime "23:00:00.000"^^xsd:time ;
     schema:subEvent <#programm-talk-19> ;
     a schema:Event .
@@ -500,43 +638,44 @@ We invite contributions of novel results and ongoing work as well as position pa
 <#programm-talk-1>
     dct:title "The Ethical Risks of Analyzing Crisis Events on Social Media with Machine Learning"@de, "The Ethical Risks of Analyzing Crisis Events on Social Media with Machine Learning"@en ;
     schema:endTime "09:35:00.000"^^xsd:time ;
-    schema:performer aksw:RicardoUsbeck, dw:AngelieKraft ;
+    schema:performer aksw:RicardoUsbeck, dw:AngelieKraft, <#programm-authors-1> ;
     schema:startTime "09:15:00.000"^^xsd:time ;
-    a schema:Event, dw:Keynote .
+    a schema:Event .
 
 <#programm-talk-10>
     site:track dw:pause ;
     dct:title "Lunch Break"@en, "Mittagessen"@de ;
     schema:endTime "13:00:00.000"^^xsd:time ;
     schema:location <../venue#Wandelhalle> ;
+    schema:performer <#programm-authors-10> ;
     schema:startTime "12:00:00.000"^^xsd:time ;
     a schema:Event .
 
 <#programm-talk-11>
     dct:title "Früherkennung möglicher Versorgungsstörungen durch die Analyse tiefer Lieferketten (Deep Supply Chains)"@de, "Früherkennung möglicher Versorgungsstörungen durch die Analyse tiefer Lieferketten (Deep Supply Chains)"@en ;
     schema:endTime "13:20:00.000"^^xsd:time ;
-    schema:performer dw:EvaHoerster ;
+    schema:performer dw:EvaHoerster, <#programm-authors-11> ;
     schema:startTime "13:00:00.000"^^xsd:time ;
-    a schema:Event, dw:Keynote .
+    a schema:Event .
 
 <#programm-talk-12>
     dct:title "Resilienzfaktoren von Wertschöpfungsketten in der Agrar- und Ernährungsbranche am Beispiel der Pflanzenölproduktion"@de, "Resilienzfaktoren von Wertschöpfungsketten in der Agrar- und Ernährungsbranche am Beispiel der Pflanzenölproduktion"@en ;
     schema:endTime "13:35:00.000"^^xsd:time ;
-    schema:performer dw:JohannLoempcke, dw:MartinSchneider ;
+    schema:performer dw:JohannLoempcke, dw:MartinSchneider, <#programm-authors-12> ;
     schema:startTime "13:20:00.000"^^xsd:time ;
     a schema:Event .
 
 <#programm-talk-13>
     dct:title "Multispectral Deep Learning Models for Wildfire Detection"@de, "Multispectral Deep Learning Models for Wildfire Detection"@en ;
     schema:endTime "13:50:00.000"^^xsd:time ;
-    schema:performer dw:AjitaRattani, dw:AtriDutta, dw:SmithaHaridasan, dw:ZelalemDemissie ;
+    schema:performer dw:AjitaRattani, dw:AtriDutta, dw:SmithaHaridasan, dw:ZelalemDemissie, <#programm-authors-13> ;
     schema:startTime "13:35:00.000"^^xsd:time ;
     a schema:Event .
 
 <#programm-talk-14>
     dct:title "Multimodal Combination of Text and Image Tweets for Disaster Response Assessment"@de, "Multimodal Combination of Text and Image Tweets for Disaster Response Assessment"@en ;
     schema:endTime "14:05:00.000"^^xsd:time ;
-    schema:performer dw:AaronBowen, dw:AjitaRattani, dw:AtriDutta, dw:GlynRimmington, dw:SaideshwarKota, dw:SmithaHaridasan ;
+    schema:performer dw:AaronBowen, dw:AjitaRattani, dw:AtriDutta, dw:GlynRimmington, dw:SaideshwarKota, dw:SmithaHaridasan, <#programm-authors-14> ;
     schema:startTime "13:50:00.000"^^xsd:time ;
     a schema:Event .
 
@@ -545,99 +684,115 @@ We invite contributions of novel results and ongoing work as well as position pa
     dct:title "Coffee Break"@en, "Kaffee Pause"@de ;
     schema:endTime "15:00:00.000"^^xsd:time ;
     schema:location <../venue#Wandelhalle> ;
+    schema:performer <#programm-authors-15> ;
     schema:startTime "14:30:00.000"^^xsd:time ;
     a schema:Event .
 
 <#programm-talk-16>
     dct:title "Semantic-Aware Metadata and Resilience of Socio-Cultural Systems"@de, "Semantic-Aware Metadata and Resilience of Socio-Cultural Systems"@en ;
     schema:endTime "15:15:00.000"^^xsd:time ;
-    schema:performer dw:HansGertGraebe ;
+    schema:performer dw:HansGertGraebe, <#programm-authors-16> ;
     schema:startTime "15:00:00.000"^^xsd:time ;
     a schema:Event .
 
 <#programm-talk-17>
     dct:title "Challenges for Achieving Supply Chain Resilience and Transparency within CoyPu"@de, "Challenges for Achieving Supply Chain Resilience and Transparency within CoyPu"@en ;
     schema:endTime "15:30:00.000"^^xsd:time ;
-    schema:performer aksw:MichaelMartin, dw:AgnesMasipGomez, dw:AlbertEckert, dw:MartinHess, dw:PhilippUlrich, dw:TheodorIsinger, dw:YushanLiu ;
+    schema:performer aksw:MichaelMartin, dw:AgnesMasipGomez, dw:AlbertEckert, dw:MartinHess, dw:PhilippUlrich, dw:TheodorIsinger, dw:YushanLiu, <#programm-authors-17> ;
     schema:startTime "15:15:00.000"^^xsd:time ;
     a schema:Event .
 
 <#programm-talk-18>
     dct:title "Challenges in the Creation and Uptake of Ontologies"@de, "Challenges in the Creation and Uptake of Ontologies"@en ;
     schema:endTime "15:45:00.000"^^xsd:time ;
-    schema:performer aksw:SoerenAuer, dw:FelixEngel ;
+    schema:performer aksw:SoerenAuer, dw:FelixEngel, <#programm-authors-18> ;
     schema:startTime "15:30:00.000"^^xsd:time ;
     a schema:Event .
 
 <#programm-talk-19>
     dct:title "Collaborative and cross-stakeholder ontology engineering"@de, "Collaborative and cross-stakeholder ontology engineering"@en ;
     schema:endTime "23:15:00.000"^^xsd:time ;
-    schema:performer aksw:SoerenAuer, dw:FawadKhan, dw:FelixEngel, dw:NenadKrdzavac ;
+    schema:performer aksw:SoerenAuer, dw:FawadKhan, dw:FelixEngel, dw:NenadKrdzavac, <#programm-authors-19> ;
     schema:startTime "23:00:00.000"^^xsd:time ;
     a schema:Event .
 
 <#programm-talk-2>
     dct:title "Overview of Data-Driven Hazard-Detection Technology Research at WSU’s Disaster Resilience Analytics Center for Enhancing Community Resilience"@de, "Overview of Data-Driven Hazard-Detection Technology Research at WSU’s Disaster Resilience Analytics Center for Enhancing Community Resilience"@en ;
     schema:endTime "09:55:00.000"^^xsd:time ;
-    schema:performer dw:AtriDutta ;
+    schema:performer dw:AtriDutta, <#programm-authors-2> ;
     schema:startTime "09:35:00.000"^^xsd:time ;
-    a schema:Event, dw:Keynote .
+    a schema:Event .
+
+<#programm-talk-25>
+    schema:performer <#programm-authors-25> ;
+    a schema:Event .
+
+<#programm-talk-26>
+    schema:performer <#programm-authors-26> ;
+    a schema:Event .
 
 <#programm-talk-27>
     dct:title "paper"@en ;
+    schema:performer <#programm-authors-27> ;
     a schema:Event .
 
 <#programm-talk-28>
     dct:title "20 min slots"@en ;
+    schema:performer <#programm-authors-28> ;
+    a schema:Event .
+
+<#programm-talk-29>
+    schema:performer <#programm-authors-29> ;
     a schema:Event .
 
 <#programm-talk-3>
     dct:title "The Coypu Platform Data Integration Workflow"@de, "The Coypu Platform Data Integration Workflow"@en ;
     schema:endTime "10:10:00.000"^^xsd:time ;
-    schema:performer aksw:NatanaelArndt ;
+    schema:performer aksw:NatanaelArndt, <#programm-authors-3> ;
     schema:startTime "09:55:00.000"^^xsd:time ;
     a schema:Event .
 
 <#programm-talk-4>
     dct:title "Semantification of Geospatial Information for Enriched Knowledge Representation in Context of Crisis Informatics"@de, "Semantification of Geospatial Information for Enriched Knowledge Representation in Context of Crisis Informatics"@en ;
     schema:endTime "10:30:00.000"^^xsd:time ;
-    schema:performer aksw:ClausStadler, aksw:KurtJunghanns, aksw:LorenzBuehmann, aksw:MichaelMartin, aksw:NormanRadtke, aksw:SabineGruenderFahrer, aksw:SimonBin ;
+    schema:performer aksw:ClausStadler, aksw:KurtJunghanns, aksw:LorenzBuehmann, aksw:MichaelMartin, aksw:NormanRadtke, aksw:SabineGruenderFahrer, aksw:SimonBin, <#programm-authors-4> ;
     schema:startTime "10:10:00.000"^^xsd:time ;
-    a schema:Event, dw:Keynote .
+    a schema:Event .
 
 <#programm-talk-5>
     site:track dw:pause ;
     dct:title "Coffee Break "@en, "Kaffee Pause"@de ;
     schema:endTime "11:00:00.000"^^xsd:time ;
     schema:location <../venue#Wandelhalle> ;
+    schema:performer <#programm-authors-5> ;
     schema:startTime "10:30:00.000"^^xsd:time ;
     a schema:Event .
 
 <#programm-talk-6>
     dct:title "Assessing Anonymized System Logs Usefulness for Behavioral Analysis in RNN Models"@de, "Assessing Anonymized System Logs Usefulness for Behavioral Analysis in RNN Models"@en ;
     schema:endTime "11:20:00.000"^^xsd:time ;
-    schema:performer dw:SiavashGhiasvand, dw:TomRichardVargis ;
+    schema:performer dw:SiavashGhiasvand, dw:TomRichardVargis, <#programm-authors-6> ;
     schema:startTime "11:00:00.000"^^xsd:time ;
-    a schema:Event, dw:Keynote .
+    a schema:Event .
 
 <#programm-talk-7>
     dct:title "Der Krisenbegriff und dessen Implikation für Entwicklung von intelligenten Werkzeugen zur Krisenprävention und zum Krisenmanagement"@de, "Der Krisenbegriff und dessen Implikation für Entwicklung von intelligenten Werkzeugen zur Krisenprävention und zum Krisenmanagement"@en ;
     schema:endTime "11:35:00.000"^^xsd:time ;
-    schema:performer dw:SelinaMudrack, dw:TobiasGebel ;
+    schema:performer dw:SelinaMudrack, dw:TobiasGebel, <#programm-authors-7> ;
     schema:startTime "11:20:00.000"^^xsd:time ;
     a schema:Event .
 
 <#programm-talk-8>
     dct:title "A lightweight citizens information portal for extreme weather events"@de, "A lightweight citizens information portal for extreme weather events"@en ;
     schema:endTime "11:45:00.000"^^xsd:time ;
-    schema:performer dw:AlexanderWillner, dw:RichardFigura ;
+    schema:performer dw:AlexanderWillner, dw:RichardFigura, <#programm-authors-8> ;
     schema:startTime "11:35:00.000"^^xsd:time ;
     a schema:Event .
 
 <#programm-talk-9>
     dct:title "FAIR – A project to make weather information more usable"@de, "FAIR – A project to make weather information more usable"@en ;
     schema:endTime "12:00:00.000"^^xsd:time ;
-    schema:performer dw:AlexanderWillner, dw:RichardFigura ;
+    schema:performer dw:AlexanderWillner, dw:RichardFigura, <#programm-authors-9> ;
     schema:startTime "11:45:00.000"^^xsd:time ;
     a schema:Event .
 
@@ -651,7 +806,6 @@ We invite contributions of novel results and ongoing work as well as position pa
     schema:organizer <../lswt2022/#Team> ;
     schema:recordedIn <https://www.youtube.com/watch?v=HJmDvqTKS8A> ;
     schema:slogan "Knowledge Graphs for Organizational Data Spaces"@en, "Wissensgraphen in Unternehmen und Organisationen"@de ;
-    schema:subEvent <../lswt2022/#programm-session-1>, <../lswt2022/#programm-session-2>, <../lswt2022/#programm-session-3>, <../lswt2022/#programm-session-4>, <../lswt2022/#programm-talk-1>, <../lswt2022/#programm-talk-13>, <../lswt2022/#programm-talk-19>, <../lswt2022/#programm-talk-2>, <../lswt2022/#programm-talk-25>, <../lswt2022/#programm-talk-26>, <../lswt2022/#programm-talk-27>, <../lswt2022/#programm-talk-6>, <../lswt2022/#programm-talk-7> ;
     a schema:Event, foaf:Document ;
     rdfs:label "10. Leipziger Semantic Web Tag"@de, "10th Leipzig Semantic Web Day"@en ;
     owl:sameAs <https://lswt2022.aksw.org/> .

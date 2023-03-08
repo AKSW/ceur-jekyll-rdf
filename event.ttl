@@ -63,7 +63,6 @@ We invite contributions of novel results and ongoing work as well as position pa
     schema:logo <https://dataweek.de/d2r2-22/logo.png> ;
     schema:organizer <https://dataweek.de/d2r2-22/#Team> ;
     schema:recordedIn <https://www.youtube.com/watch?v=NA5-XYX5Kbo> ;
-    schema:subEvent <https://dataweek.de/d2r2-22/#programm-session-1>, <https://dataweek.de/d2r2-22/#programm-session-2>, <https://dataweek.de/d2r2-22/#programm-session-3>, <https://dataweek.de/d2r2-22/#programm-session-4>, <https://dataweek.de/d2r2-22/#programm-talk-1>, <https://dataweek.de/d2r2-22/#programm-talk-13>, <https://dataweek.de/d2r2-22/#programm-talk-19>, <https://dataweek.de/d2r2-22/#programm-talk-24>, <https://dataweek.de/d2r2-22/#programm-talk-25>, <https://dataweek.de/d2r2-22/#programm-talk-7> ;
     vivo:hasProceedings <https://dataweek.de/d2r2-22/#proceedings> ;
     ceur:acronym "D2R2" ;
     ceur:submittedpapers 1 ;
@@ -204,7 +203,6 @@ We invite contributions of novel results and ongoing work as well as position pa
     schema:organizer <https://dataweek.de/lswt2022/#Team> ;
     schema:recordedIn <https://www.youtube.com/watch?v=HJmDvqTKS8A> ;
     schema:slogan "Knowledge Graphs for Organizational Data Spaces"@en, "Wissensgraphen in Unternehmen und Organisationen"@de ;
-    schema:subEvent <https://dataweek.de/lswt2022/#programm-session-1>, <https://dataweek.de/lswt2022/#programm-session-2>, <https://dataweek.de/lswt2022/#programm-session-3>, <https://dataweek.de/lswt2022/#programm-session-4>, <https://dataweek.de/lswt2022/#programm-talk-1>, <https://dataweek.de/lswt2022/#programm-talk-13>, <https://dataweek.de/lswt2022/#programm-talk-19>, <https://dataweek.de/lswt2022/#programm-talk-2>, <https://dataweek.de/lswt2022/#programm-talk-25>, <https://dataweek.de/lswt2022/#programm-talk-26>, <https://dataweek.de/lswt2022/#programm-talk-27>, <https://dataweek.de/lswt2022/#programm-talk-6>, <https://dataweek.de/lswt2022/#programm-talk-7> ;
     a schema:Event, foaf:Document ;
     rdfs:label "10. Leipziger Semantic Web Tag"@de, "10th Leipzig Semantic Web Day"@en ;
     owl:sameAs <https://lswt2022.aksw.org/> .
