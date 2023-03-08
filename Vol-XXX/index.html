@@ -2,7 +2,9 @@
 rdf_prefix_path: "_data/prefixes.sparql"
 ---
 {%- assign rootResource = site.rootResource | rdf_get -%}
-{%- assign development = true -%}
+{%- assign development = site.development -%}
+{%- assign keynote_type = "dw:Keynote" | rdf_get -%}
+{%- assign invited_type = "dw:InvitedPaper" | rdf_get -%}
 
 {%- comment -%}
 The following variables need to be adapted by you:
@@ -50,6 +52,10 @@ CEURACCEPTEDSHORTPAPERS: the number of short accepted peer-reviewed papers  (opt
 {%- assign MM = proceedings | rdf_property: "dct:dateSubmitted" | date: "%m" -%}
 
 {%- assign label = workshop | rdf_property: "rdfs:label" -%}
+{%- assign label_postfix = label | split: " " | last -%}
+{%- unless label_postfix == YYYY -%}
+{%- assign label = label | append: YYYY -%}
+{%- endunless -%}
 {%- assign CEURLANG = proceedings | rdf_property: "dct:language" | rdf_property: "lvont:iso6392TCode" -%}
 {%- assign CEURPUBYEAR = JJJJ -%}
 {%- assign CEURWSYEAR = YYYY -%}
@@ -62,52 +68,36 @@ CEURACCEPTEDSHORTPAPERS: the number of short accepted peer-reviewed papers  (opt
 {%- else -%}
 {%- assign CEURCOLOCATED = "NONE" -%}
 {%- endif -%}
+{%- assign colocated_label = superEvent | rdf_property: "rdfs:label", site.language -%}
+{%- unless colocated_label -%}
+{%- assign colocated_label = superEvent | rdf_property: "rdfs:label" -%}
+{%- endunless -%}
 {%- assign location = workshop | rdf_property: "schema:location" -%}
 {%- unless location -%}
 {%- assign location = superEvent | rdf_property: "schema:location" -%}
 {%- endunless -%}
 {%- assign country = location | rdf_property: "schema:addressCountry" -%}
 {%- assign locality = location | rdf_property: "schema:addressLocality" -%}
-{%- assign CEURLOCTIME = workshop | rdf_property: "dct:date" | prepend: ", " | prepend: country | prepend: ", " | prepend: locality -%}
+{%- assign CEURLOCTIME = workshop | rdf_property: "dct:date" | date: "%B %e, %Y" | prepend: ", " | prepend: country | prepend: ", " | prepend: locality -%}
 
-{%- assign editors = paper.entity | rdf_container: "schema:organizer" -%}
+{%- assign editors = workshop | rdf_property: "schema:organizer" | rdf_container -%}
 {%- unless editors.first -%}
-{%- assign editors = paper.entity | rdf_collection: "schema:organizer"  -%}
+{%- assign editors = workshop | rdf_property: "schema:organizer" | rdf_collection -%}
 {%- endunless -%}
 {%- unless editors.first -%}
-{%- assign editors = paper.entity | rdf_property: "schema:organizer", nil, true -%}
+{%- assign editors = workshop | rdf_property: "schema:organizer", nil, true -%}
 {%- endunless -%}
-{%- for editor in editors -%}
-{%- assign CEURVOLEDITOR = editor | rdf_property: "foaf:name" -%}
-{%- endfor -%}
 
 {%- capture subevent_query -%}
 select distinct ?entity {
   ?resourceUri schema:subEvent ?entity .
   ?entity schema:startTime ?time .
+  optional {
+    ?entity site:track ?track
+  }
+  filter(!bound(?track) || ?track != dw:pause)
 } order by ?time
 {%- endcapture -%}
-
-{%- assign sessions = workshop | sparql_query: subevent_query -%}
-
-{%- for session in sessions -%}
-{%- assign CEURSESSION = session.entity | rdf_property: "dct:title" -%}
-{%- assign papers = session.entity | sparql_query: subevent_query -%}
-{%- for paper in papers -%}
-{%- assign CEURTITLE = paper.entity | rdf_property: "dct:title" -%}
-{%- assign CEURPAGES = "" -%}
-{%- assign authors = paper.entity | rdf_container: "schema:performer" -%}
-{%- unless authors.first -%}
-{%- assign authors = paper.entity | rdf_collection: "schema:performer"  -%}
-{%- endunless -%}
-{%- unless authors.first -%}
-{%- assign authors = paper.entity | rdf_property: "schema:performer", nil, true -%}
-{%- endunless -%}
-{%- for author in authors -%}
-{%- assign CEURAUTHOR = author | rdf_property: "foaf:name" -%}
-{%- endfor -%}
-{%- endfor -%}
-{%- endfor -%}
 
 {%- assign CEURSUBMITTEDPAPERS = workshop | rdf_property: "ceur:submittedpapers" -%}
 {%- assign CEURACCEPTEDPAPERS = workshop | rdf_property: "ceur:acceptedpapers" -%}
@@ -127,11 +117,11 @@ select distinct ?entity {
 {% if development %}
 <pre># Editing instructions
 # The following variables need to be adapted by you:
-# JJJJ=Year in which the final papers of the proceedings were produced
-# YYYY=Year in which the workshop took place (in most cases YYYY=JJJJ)
-# NNNN=Acronym of the Workshop
-# DD=Day of submission of the workshop proceedings to CEUR-WS.org
-# MM=Month of submission of the workshop proceedings (MM=01,02,03,04,05,06,07,08,09,10,11,12)
+# JJJJ="{{JJJJ}}" Year in which the final papers of the proceedings were produced
+# YYYY="{{YYYY}}" Year in which the workshop took place (in most cases YYYY=JJJJ)
+# NNNN="{{NNNN}}" Acronym of the Workshop
+# DD="{{DD}}" Day of submission of the workshop proceedings to CEUR-WS.org
+# MM="{{MM}}" Month of submission of the workshop proceedings (MM=01,02,03,04,05,06,07,08,09,10,11,12)
 # The variable
 # XXX=Volume number of the proceedings with CEUR-WS.org
 # shall be set by CEUR-WS.org. CEUR-WS.org shall also set the publication date.
@@ -185,9 +175,9 @@ select distinct ?entity {
 <div style="float:left" id="CEURCCBY"></div>
 <span class="CEURVOLNR">Vol-XXX</span> <br>
 <span class="CEURURN">urn:nbn:de:0074-XXX-C</span>
-<p class="unobtrusive copyright" style="text-align: justify">Copyright &copy; JJJJ for
+<p class="unobtrusive copyright" style="text-align: justify">Copyright &copy; {{JJJJ}} for
 the individual papers by the papers' authors.
-Copyright &copy; <span class="CEURPUBYEAR">JJJJ</span> for the volume
+Copyright &copy; <span class="CEURPUBYEAR">{{CEURPUBYEAR}}</span> for the volume
 as a collection by its editors.
 This volume and its papers are published under the
 Creative Commons License Attribution 4.0 International
@@ -210,40 +200,72 @@ Creative Commons License Attribution 4.0 International
 
 <br><br><br>
 
-<h1><a href="http://www.workshop-website.org/loc"><span class="CEURVOLACRONYM">NNNN YYYY</span></a><br>
-<span class="CEURVOLTITLE">Publishing Papers with CEUR-WS YYYY</span></h1>
+<h1><a href="http://www.workshop-website.org/loc"><span class="CEURVOLACRONYM">{{NNNN}} {{YYYY}}</span></a><br>
+<span class="CEURVOLTITLE">{{CEURVOLTITLE}}</span></h1>
 <br>
 
 <h3>
-<span class="CEURFULLTITLE">Proceedings of the Workshop on Publishing Papers with CEUR-WS</span><br>
-<pre># delete one of the following two CEURCOLOCATED lines:</pre>
-<!-- co-located with <span class="CEURCOLOCATED">NONE</span> -->
-co-located with 10th International Conference on Online Publishing (<span class="CEURCOLOCATED">OPub YYYY</span>)<br>
+<span class="CEURFULLTITLE">{{CEURFULLTITLE}}</span><br>
+{% if development %}<pre># delete one of the following two CEURCOLOCATED lines:</pre>{% endif %}
+{% unless CEURCOLOCATED == "NONE" %}
+{% unless colocated_label %}
+co-located with <span class="CEURCOLOCATED">{{CEURCOLOCATED}}</span><br>
+{% else %}
+co-located with {{colocated_label}} (<span class="CEURCOLOCATED">{{CEURCOLOCATED}}</span>)<br>
+{% endunless %}
+{% endunless %}
 </h3>
-<h3><span class="CEURLOCTIME">City, Country, Month Day, YYYY</span>.</h3>
-<pre># If the event is virtual, then specify "Virtual Event, City, Country ..." using the location of the local organizer of the event</pre>
+<h3><span class="CEURLOCTIME">{{CEURLOCTIME | umlaut_escape}}</span>.</h3>
+{% if development %}<pre># If the event is virtual, then specify "Virtual Event, City, Country ..." using the location of the local organizer of the event</pre>{% endif %}
 
 <br>
 <b> Edited by </b>
 <p>
 
-<pre># use full names, but omit any academic title</pre>
+{% if development %}<pre># use full names, but omit any academic title</pre>{% endif %}
 </p><h3>
-   <a href="http://www.personal-webpage.org/myhome/"><span class="CEURVOLEDITOR">Mary Editor</span></a> *<br>
-   <span class="CEURVOLEDITOR">Peter Coeditor</span> **<br>
+{%- assign affiliations = "" -%}
+{%- assign affiliation_counter = 0 -%}
+{%- for editor in editors -%}
+{%- assign CEURVOLEDITOR = editor | rdf_property: "foaf:name" -%}
+{%- assign voleditor_homepage = editor | rdf_property: "foaf:homepage" -%}
+{%- assign voleditor_affiliation = editor | rdf_property: "schema:affiliation" -%}
+{%- assign voleditor_member = editor | rdf_property: "schema:memberOf" -%}
+{%- if voleditor_homepage -%}
+   <a href="{{voleditor_homepage}}"><span class="CEURVOLEDITOR">{{CEURVOLEDITOR | umlaut_escape}}</span></a>
+{% else -%}
+   <span class="CEURVOLEDITOR">{{CEURVOLEDITOR | umlaut_escape}}</span>
+{% endif -%}
+{% if voleditor_affiliation %}
+{%- assign affiliation_counter = affiliation_counter | plus: 1 -%}
+{%- assign range = (1..affiliation_counter) -%}
+{% for i in range -%}*{%- endfor -%}
+{%- capture new_affiliation -%}
+{%- for i in range -%}*{%- endfor %} {% include affiliation.html affiliation=voleditor_affiliation %}<br>
+{%- endcapture -%}
+{%- assign affiliations = affiliations | append: new_affiliation -%}
+{%- endif -%}
+{% if voleditor_member %}
+{%- assign affiliation_counter = affiliation_counter | plus: 1 -%}
+{%- assign range = (1..affiliation_counter) %}
+{% for i in range -%}*{%- endfor -%}
+{%- capture new_affiliation -%}
+{%- for i in range -%}*{%- endfor %} {% include affiliation.html affiliation=voleditor_member %}<br>
+{%- endcapture -%}
+{%- assign affiliations = affiliations | append: new_affiliation -%}
+{%- endif -%}<br>
+{%- endfor -%}
 
 </h3>
 
-* <a href="http://www.univ-of-science.org/">University of Science</a>,
-  Faculty of Research, 9999 Novocity, Country<br>
-** <a href="http://www.acme-company.com/research/">ACME Inc.</a>,
-   Research Laboratory, 8888 Technotown, Othercountry <br>
+{{affiliations}}
   <br>
 
 <hr>
 
 <br><br><br>
 
+{% if development %}
 <pre># Instructions for Table of Contents
 # The table of contents normally is a plain list of papers (with titles/authors).
 # The paper title should be linked to the paper URL (usually pdf).
@@ -272,11 +294,13 @@ co-located with 10th International Conference on Online Publishing (<span class=
 # By default, all PDF files of a published volume will be watermarked by their online CEUR-WS URL.
 # You can disable this by prefixing the filename with the letter 'x', see xpreface below.
 #</pre>
+{% endif %}
 
 
 <div class="CEURTOC">
 <h2> Table of Contents </h2>
 
+{% if development %}
 <pre># Prefaces, frontmatter etc. typically have no explicit authors.
 # Note that the &lt;li id="..."&gt; attribute should have the same value as
 # the name of the file linked to, just without the filename extension.
@@ -288,153 +312,90 @@ co-located with 10th International Conference on Online Publishing (<span class=
 # process in more detail in the preface pdf file. You can change the precise wording of the sentence to adapt it to
 # the context of your workshop/conference. The tags for REGULAR and SHORT papers are optional.
 # </pre>
+{% endif %}
 <ul>
 <li id="xpreface">
 <A href="xpreface.pdf">Preface</A><BR>
-Summary: There were <span class="CEURSUBMITTEDPAPERS">49</span> papers submitted for peer-review to this workshop. Out of these,
-<span class="CEURACCEPTEDPAPERS">20</span> papers were accepted for this volume,
-<span class="CEURACCEPTEDREGULARPAPERS">12</span> as regular papers and
-<span class="CEURACCEPTEDSHORTPAPERS">8</span> as short papers.
+Summary: There were <span class="CEURSUBMITTEDPAPERS">{{CEURSUBMITTEDPAPERS}}</span> papers submitted for peer-review to this workshop. Out of these,
+<span class="CEURACCEPTEDPAPERS">{{CEURACCEPTEDPAPERS}}</span> papers were accepted for this volume,
+<span class="CEURACCEPTEDREGULARPAPERS">{{CEURACCEPTEDREGULARPAPERS}}</span> as regular papers and
+<span class="CEURACCEPTEDSHORTPAPERS">{{CEURACCEPTEDSHORTPAPERS}}</span> as short papers.
 </li>
 </ul>
 <BR>
 
 
+{% if development %}
 <pre># The session element is optional. It structures the table of contents.
 # Each CEURSESSION must be followed by at least one paper using the li clause
 # You can also use h3 subtitles without the CEURSESSION tag. Then, no
 # restriction is imposed.
 #</pre>
-<h3><span class="CEURSESSION">Session 1: Invited Talks</span></h3>
-
-<pre># invited1.pdf below is an example of an invited paper.
-# paper links must follow directly the li element. Note that special characters like accents must be specified in their HTML command form!
-
-# invited2.pdf is an example of a multi-page paper with page numbers</pre>
-<ul>
-
-<li id="invited1"><a href="invited1.pdf">
-<span class="CEURTITLE">Preparing the Submission File (invited paper)</span></a>
-<span class="CEURPAGES">1</span>
-<br>
-<span class="CEURAUTHOR">Ken Bar</span>,
-<span class="CEURAUTHOR">Anne Fo&eacute;</span>
-</li>
-
-<li id="invited2"><a href="invited2.pdf">
-<span class="CEURTITLE">Filling a Put-Fax Form (invited paper)</span></a>
-<span class="CEURPAGES">3-14</span>
-<br>
-<span class="CEURAUTHOR">Mary Doe</span>,
-<span class="CEURAUTHOR">Peter M&uuml;stermann</span>
-</li>
-
-<li id="keynote1"><a href="keynote1.pdf">
-<span class="CEURTITLE">Dealing with Page Numbers and Rather Long Titles That Could Span Multiple Lines to
-Check Whether All is Displayed Correctly (keynote)</span></a>
-<span class="CEURPAGES">15-22</span>
-<br>
-<span class="CEURAUTHOR">Carlos Nombre</span>
-</li>
-
-</ul>
+{% endif %}
 
 
-<h3><span class="CEURSESSION">Session 2: The New CEURART Style </span></h3>
-<pre># The LaTeX files for the new CEURART style are available as <a href="https://www.overleaf.com/latex/templates/template-for-submissions-to-ceur-workshop-proceedings-ceur-ws-dot-org/hpvjjzhjxzjk">Overleaf Template</a> and as <A HREF="http://ceur-ws.org/Vol-XXX/CEURART.zip">download ZIP</A>.
+{% if development %}
+<pre># paper links must follow directly the li element. Note that special characters like accents must be specified in their HTML command form!
+# The LaTeX files for the new CEURART style are available as <a href="https://www.overleaf.com/latex/templates/template-for-submissions-to-ceur-workshop-proceedings-ceur-ws-dot-org/hpvjjzhjxzjk">Overleaf Template</a> and as <A HREF="http://ceur-ws.org/Vol-XXX/CEURART.zip">download ZIP</A>.
 # If you use a local LaTeX locally instead via Overleaf, then install a recent (2020) version of TeX-Live.
-# The ZIP file also contains the DOCX and ODT variants of the CEUR-ART style.</pre>
-
-<ul>
-<li id="sample-1col"><a href="sample-1col.pdf">
-<span class="CEURTITLE">A better way to format your document for CEUR-WS</span></a> (1-col)
-<span class="CEURPAGES">23-31</span>
-<br>
-<span class="CEURAUTHOR">Dmitry S. Kulyabov</span>,
-<span class="CEURAUTHOR">Ilaria Tiddi</span>,
-<span class="CEURAUTHOR">Manfred Jeusfeld</span>
-</li>
-
-<li id="sample-2col"><a href="sample-2col.pdf">
-<span class="CEURTITLE">A better way to format your document for CEUR-WS</span></a> (2-col)
-<span class="CEURPAGES">32-37</span>
-<br>
-<span class="CEURAUTHOR">Dmitry S. Kulyabov</span>,
-<span class="CEURAUTHOR">Ilaria Tiddi</span>,
-<span class="CEURAUTHOR">Manfred Jeusfeld</span>
-</li>
-
-<li id="CEUR-Template-1col"><a href="CEUR-Template-1col.pdf">
-<span class="CEURTITLE">Word Template in CEURART for One Column</span></a> (1col)
-<span class="CEURPAGES">38-41</span>
-<br>
-<span class="CEURAUTHOR">Aleksandr Ometov</span>,
-<span class="CEURAUTHOR">Mary Y. Writter</span>,
-<span class="CEURAUTHOR">John X. Ceur</span>
-</li>
-
-<li id="CEUR-Template-2col"><a href="CEUR-Template-2col.pdf">
-<span class="CEURTITLE">Word Template in CEURART for Two Columns</span></a> (2col)
-<span class="CEURPAGES">42-44</span>
-<br>
-<span class="CEURAUTHOR">Aleksandr Ometov</span>,
-<span class="CEURAUTHOR">Mary Y. Writter</span>,
-<span class="CEURAUTHOR">John X. Ceur</span>
-</li>
-
-
-<pre># The DOCX templates <A HREF="CEUR-Template-1col.docx">CEUR-Template-1col.docx</A> and <A HREF="CEUR-Template-2col.docx">CEUR-Template-2col.docx</A>
+# The ZIP file also contains the DOCX and ODT variants of the CEUR-ART style.
+# The DOCX templates <A HREF="CEUR-Template-1col.docx">CEUR-Template-1col.docx</A> and <A HREF="CEUR-Template-2col.docx">CEUR-Template-2col.docx</A>
 # are available as well.
 # You may also use the ODT templates <A HREF="CEUR-Template-1col.odt">CEUR-Template-1col.odt</A> and <A HREF="CEUR-Template-2col.odt">CEUR-Template-2col.odt</A>.
 # The DOCX and ODT files are derived from a template created by Aleksandr Ometov
-# and can be used under a Creative Commons License Attribute-ShareAlike 4.0 International.
+# and can be used under a Creative Commons License Attribute-ShareAlike 4.0 International.</pre>
+{% endif %}
 
-</pre>
+{%- assign sessions = workshop | sparql_query: subevent_query -%}
+{%- for session in sessions -%}
+{%- assign CEURSESSION = session.entity | rdf_property: "dct:title", site.language -%}
+{%- unless CEURSESSION -%}
+{%- assign CEURSESSION = session.entity | rdf_property: "dct:title" -%}
+{%- endunless -%}
+{%- assign papers = session.entity | sparql_query: subevent_query -%}
+<h3><span class="CEURSESSION">{{CEURSESSION | umlaut_escape}}</span></h3>
 
-</ul>
-
-
-<h3><span class="CEURSESSION">Session 3: Another Session </span></h3>
-
-<pre># The following are examples of papers without page numbers</pre>
 <ul>
-
-<li id="paper4"><a href="paper4.pdf">
-<span class="CEURTITLE">In Medias Res</span></a>
-<br>
-<span class="CEURAUTHOR">Anne Fo&eacute;</span>
-</li>
-
+{%- for paper in papers -%}
+{%- assign CEURTITLE = paper.entity | rdf_property: "dct:title", site.language -%}
+{%- unless CEURTITLE -%}
+{%- assign CEURTITLE = paper.entity | rdf_property: "dct:title" -%}
+{%- endunless -%}
+{%- assign CEURPAGES = "" -%}
+{%- assign authors = paper.entity | rdf_property: "schema:performer" | rdf_container -%}
+{%- unless authors.first -%}
+{%- assign authors = paper.entity | rdf_property: "schema:performer" | rdf_collection -%}
+{%- endunless -%}
+{%- unless authors.first -%}
+{%- assign authors = paper.entity | rdf_property: "schema:performer", nil, true -%}
+{%- endunless -%}
+{%- assign track = "" -%}
+{% assign isKeynote = paper.entity | rdf_property: "rdf:type", nil, true | contains: keynote_type %}
+{% assign isInvited = paper.entity | rdf_property: "rdf:type", nil, true | contains: invited_type %}
+{%- if isKeynote -%}
+{%- assign track = " (keynote)" -%}
+{%- elif isInvited -%}
+{%- assign track = " (invited paper)" -%}
+{%- endif -%}
 <li id="paper5"><a href="paper5.pdf">
-<span class="CEURTITLE">Using Tags in HTML</span></a>
+<span class="CEURTITLE">{{CEURTITLE | umlaut_escape}}{{track}}</span></a>
+{%- comment -%}<span class="CEURPAGES">{{CEURPAGES}}</span>{%- endcomment -%}
 <br>
-<span class="CEURAUTHOR">Peter M&uuml;stermann</span>
+{%- for author in authors -%}
+{%- assign CEURAUTHOR = author | rdf_property: "foaf:name" -%}
+<span class="CEURAUTHOR">{{CEURAUTHOR | umlaut_escape}}</span>{% unless forloop.last %}, {% endunless %}
+{%- endfor -%}
 </li>
-
-<pre># The subsequent paper points to a subdirectory that contains the paper,
-# possible data sets and other material that is regarded as part of the paper.
-# Use the model of this subdirectory if you want to give authors the opportunity
-# to publish more than just the paper PDF. The size of the complete proceedings
-# should however not exceed around 100MB!</pre>
-
-
-<li id="paperX"><a href="paperX/">
-<span class="CEURTITLE">A Complex Paper Model</span></a>
-<br>
-<span class="CEURAUTHOR">Anna Paperi</span>,
-<span class="CEURAUTHOR">Bert Modelo</span>
-</li>
-
-
+{%- endfor -%}
 </ul>
-
+{%- endfor -%}
 
 </div>
 
 
 <hr>
 <span class="unobtrusive">
-YYYY-MM-DD: submitted by Peter Coeditor,
+{{YYYY}}-{{MM}}-{{DD}}: submitted by Peter Coeditor,
             metadata incl. bibliographic data published under <A HREF="https://creativecommons.org/publicdomain/zero/1.0/">Creative Commons CC0</A><br>
 <span class="CEURPUBDATE">yyyy-mm-dd</span>: published on CEUR Workshop Proceedings (CEUR-WS.org, ISSN 1613-0073)
 	|<a href="https://validator.w3.org/nu/?doc=http%3A%2F%2Fceur-ws.org%2FVol-XXX%2F">valid HTML5</a>|
