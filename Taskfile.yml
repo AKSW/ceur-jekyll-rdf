@@ -54,7 +54,8 @@ tasks:
     cmds:
       - rapper -c -i turtle graph.ttl
 
-  graph:get-program:
-    desc: Get the program from cmem
+  graph:
+    desc: Get the program from cmem and join it with the event graph
     cmds:
       - cmemc -c aksw.eccenca.dev graph export https://dataweek.de/d2r2-22/ | rapper -i turtle -o turtle - https://dataweek.de/d2r2-22/ > paper.ttl
+      - cat event.ttl paper.ttl | rapper -i turtle -o turtle - https://dataweek.de/d2r2-22/ > graph.ttl
