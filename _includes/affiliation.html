@@ -1,0 +1,8 @@
+{%- assign affiliation = include.affiliation -%}
+{%- assign homepage = affiliation | rdf_property: "foaf:homepage" -%}
+{%- assign label = affiliation | rdf_property: "rdfs:label", site.language -%}
+{%- unless label -%}
+{%- assign label = affiliation | rdf_property: "rdfs:label" -%}
+{%- endunless -%}
+<a href="{{homepage}}">{{label}}</a>,
+  Faculty of Research, 9999 Novocity, Country
