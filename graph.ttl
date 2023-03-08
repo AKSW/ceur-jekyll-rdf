@@ -35,8 +35,16 @@ aksw:ClausStadler
     foaf:homepage aksw:ClausStadler ;
     foaf:name "Claus Stadler" .
 
+aksw:Group
+    site:small_logo "/images/partner/AKSW_Logo_small.svg" ;
+    a schema:Organization ;
+    rdfs:label "AKSW Research Group" ;
+    foaf:homepage <http://aksw.org/> ;
+    foaf:logo "/images/partner/AKSW_Logo.svg" .
+
 aksw:JuliaHolze
     schema:affiliation <https://infai.org/> ;
+    schema:memberOf <https://dbpedia.org/> ;
     a schema:Person, foaf:Document, foaf:Person ;
     foaf:homepage aksw:JuliaHolze ;
     foaf:name "Julia Holze" .
@@ -55,6 +63,7 @@ aksw:LorenzBuehmann
 
 aksw:MichaelMartin
     schema:affiliation <https://infai.org/> ;
+    schema:memberOf aksw:Group ;
     a schema:Person, foaf:Document, foaf:Person ;
     skos:prefLabel "Dr. Michael Martin" ;
     foaf:homepage aksw:MichaelMartin ;
@@ -63,6 +72,7 @@ aksw:MichaelMartin
 
 aksw:NatanaelArndt
     schema:affiliation <https://www.eccenca.com/> ;
+    schema:memberOf aksw:Group ;
     a schema:Person, foaf:Document, foaf:Person ;
     skos:prefLabel "Dr. Natanael Arndt" ;
     foaf:homepage aksw:NatanaelArndt ;
@@ -91,6 +101,7 @@ aksw:RoyMeissner
 
 aksw:SabineGruenderFahrer
     schema:affiliation <https://infai.org/> ;
+    schema:memberOf aksw:Group ;
     a schema:Person, foaf:Document, foaf:Person ;
     skos:prefLabel "Dr. Sabine Gründer-Fahrer" ;
     foaf:homepage aksw:SabineGruenderFahrer ;
@@ -99,6 +110,7 @@ aksw:SabineGruenderFahrer
 
 aksw:SebastianTramp
     schema:affiliation <https://www.eccenca.com/> ;
+    schema:memberOf aksw:Group ;
     a schema:Person, foaf:Document, foaf:Person ;
     skos:prefLabel "Dr. Sebastian Tramp" ;
     foaf:homepage aksw:SebastianTramp ;
@@ -852,15 +864,35 @@ Martin-Luther-Ring 4 - 6<br/>
 04109 Leipzig<br/>"""@en ;
     dct:title "Wandelhalle" .
 
+<../venue/>
+    schema:addressCountry "Germany" ;
+    schema:addressLocality "Leipzig" ;
+    schema:name "Neues Rathaus/City Hall" ;
+    schema:postalCode "04109" ;
+    schema:streetAddress "Martin-Luther-Ring 4-6" ;
+    a schema:PostalAddress, foaf:Document ;
+    rdfs:label "Venue"@en, "Veranstaltungsort"@de ;
+    <http://www.w3.org/2003/01/geo/wgs84_pos#geometry> "POINT(12.37267 51.33594)" ;
+    <http://www.w3.org/2003/01/geo/wgs84_pos#lat> "51.33594"^^xsd:float ;
+    <http://www.w3.org/2003/01/geo/wgs84_pos#long> "12.37267"^^xsd:float .
+
+<https://dbpedia.org/>
+    site:small_logo "/images/partner/DBpediaLogo.svg" ;
+    a schema:Organization ;
+    rdfs:label "DBpedia Association" ;
+    foaf:homepage <https://dbpedia.org/> ;
+    foaf:logo "/images/partner/DBpediaLogo.svg" .
+
 <https://iakleipzig.de/>
     a foaf:Document, foaf:Organization ;
     rdfs:label "IAK Agrar Consulting GmbH"@de, "IAK Agrar Consulting GmbH"@en ;
     foaf:homepage <https://iakleipzig.de/> .
 
 <https://infai.org/>
-    a foaf:Document, foaf:Organization ;
+    a schema:Organization, foaf:Document, foaf:Organization ;
     rdfs:label "Institut für Angewandte Informatik e.V."@de, "Institute for Applied Informatics"@en ;
-    foaf:homepage <https://infai.org/> .
+    foaf:homepage <https://infai.org/> ;
+    foaf:logo "/images/partner/InfAI_small.svg" .
 
 <https://siemens.com/>
     a foaf:Document, foaf:Organization ;
@@ -900,9 +932,10 @@ Martin-Luther-Ring 4 - 6<br/>
     a foaf:Document .
 
 <https://www.eccenca.com/>
-    a foaf:Document, foaf:Organization ;
-    rdfs:label "eccenca GmbH"@de, "eccenca GmbH"@en ;
-    foaf:homepage <https://www.eccenca.com/> .
+    a schema:Organization, foaf:Document, foaf:Organization ;
+    rdfs:label "eccenca GmbH", "eccenca GmbH"@de, "eccenca GmbH"@en ;
+    foaf:homepage <https://www.eccenca.com/> ;
+    foaf:logo dw:LogoEccenca .
 
 <https://www.inf.uni-hamburg.de/en/inst/ab/sems/people/angelie-kraft.html>
     a foaf:Document .
