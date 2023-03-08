@@ -2,6 +2,7 @@
 baseurl: "/d2r2-22"
 url: "https://dataweek.de"
 rootResource: "<https://dataweek.de/d2r2-22/>"
+development: true
 language: en
 
 # Build settings
