@@ -1,0 +1,20 @@
+# Site settings
+baseurl: "/d2r2-22"
+url: "https://dataweek.de"
+rootResource: "<https://dataweek.de/d2r2-22/>"
+language: en
+
+# Build settings
+timezone: Europe/Berlin
+markdown: kramdown
+kramdown:
+  parse_block_html: true
+
+plugins:
+  - jekyll-rdf
+exclude:
+  - Gemfile
+  - Gemfile.lock
+jekyll_rdf:
+  restriction: "SELECT ?resourceUri WHERE { ?resourceUri ?p ?o . FILTER regex(str(?resourceUri), \"^http://dataweek.de/d2r2-22/\") }"
+  path: "graph.ttl"
