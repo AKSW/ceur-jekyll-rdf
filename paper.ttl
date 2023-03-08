@@ -1,0 +1,593 @@
+@base <https://dataweek.de/d2r2-22/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+
+<http://aksw.org/AntoninDelpeuch>
+    <http://schema.org/affiliation> <https://infai.org/> ;
+    a <http://schema.org/Person>, <http://xmlns.com/foaf/0.1/Document>, <http://xmlns.com/foaf/0.1/Person> ;
+    <http://www.w3.org/2004/02/skos/core#prefLabel> "Dr. Antonin Delpeuch" ;
+    <http://xmlns.com/foaf/0.1/homepage> <http://aksw.org/AntoninDelpeuch> ;
+    <http://xmlns.com/foaf/0.1/name> "Antonin Delpeuch" ;
+    <http://xmlns.com/foaf/0.1/title> "Dr." .
+
+<http://aksw.org/ClausStadler>
+    <http://schema.org/affiliation> <https://infai.org/> ;
+    a <http://schema.org/Person>, <http://xmlns.com/foaf/0.1/Document>, <http://xmlns.com/foaf/0.1/Person> ;
+    <http://xmlns.com/foaf/0.1/homepage> <http://aksw.org/ClausStadler> ;
+    <http://xmlns.com/foaf/0.1/name> "Claus Stadler" .
+
+<http://aksw.org/JuliaHolze>
+    <http://schema.org/affiliation> <https://infai.org/> ;
+    a <http://schema.org/Person>, <http://xmlns.com/foaf/0.1/Document>, <http://xmlns.com/foaf/0.1/Person> ;
+    <http://xmlns.com/foaf/0.1/homepage> <http://aksw.org/JuliaHolze> ;
+    <http://xmlns.com/foaf/0.1/name> "Julia Holze" .
+
+<http://aksw.org/KurtJunghanns>
+    <http://schema.org/affiliation> <https://infai.org/> ;
+    a <http://schema.org/Person>, <http://xmlns.com/foaf/0.1/Person> ;
+    <http://xmlns.com/foaf/0.1/homepage> <https://aksw.org/KurtJunghanns> ;
+    <http://xmlns.com/foaf/0.1/name> "Kurt Junghanns" .
+
+<http://aksw.org/LorenzBuehmann>
+    <http://schema.org/affiliation> <https://infai.org/> ;
+    a <http://schema.org/Person>, <http://xmlns.com/foaf/0.1/Document>, <http://xmlns.com/foaf/0.1/Person> ;
+    <http://xmlns.com/foaf/0.1/homepage> <http://aksw.org/LorenzBuehmann> ;
+    <http://xmlns.com/foaf/0.1/name> "Lorenz Bühmann" .
+
+<http://aksw.org/MichaelMartin>
+    <http://schema.org/affiliation> <https://infai.org/> ;
+    a <http://schema.org/Person>, <http://xmlns.com/foaf/0.1/Document>, <http://xmlns.com/foaf/0.1/Person> ;
+    <http://www.w3.org/2004/02/skos/core#prefLabel> "Dr. Michael Martin" ;
+    <http://xmlns.com/foaf/0.1/homepage> <http://aksw.org/MichaelMartin> ;
+    <http://xmlns.com/foaf/0.1/name> "Michael Martin" ;
+    <http://xmlns.com/foaf/0.1/title> "Dr." .
+
+<http://aksw.org/NatanaelArndt>
+    <http://schema.org/affiliation> <https://www.eccenca.com/> ;
+    a <http://schema.org/Person>, <http://xmlns.com/foaf/0.1/Document>, <http://xmlns.com/foaf/0.1/Person> ;
+    <http://www.w3.org/2004/02/skos/core#prefLabel> "Dr. Natanael Arndt" ;
+    <http://xmlns.com/foaf/0.1/homepage> <http://aksw.org/NatanaelArndt> ;
+    <http://xmlns.com/foaf/0.1/name> "Natanael Arndt" ;
+    <http://xmlns.com/foaf/0.1/title> "Dr." .
+
+<http://aksw.org/NormanRadtke>
+    <http://schema.org/affiliation> <https://infai.org/> ;
+    a <http://schema.org/Person>, <http://xmlns.com/foaf/0.1/Document>, <http://xmlns.com/foaf/0.1/Person> ;
+    <http://xmlns.com/foaf/0.1/homepage> <http://aksw.org/NormanRadtke> ;
+    <http://xmlns.com/foaf/0.1/name> "Norman Radtke" .
+
+<http://aksw.org/RicardoUsbeck>
+    <http://schema.org/affiliation> <https://www.uni-hamburg.de/> ;
+    a <http://schema.org/Person>, <http://xmlns.com/foaf/0.1/Document>, <http://xmlns.com/foaf/0.1/Person> ;
+    <http://www.w3.org/2004/02/skos/core#prefLabel> "Prof. Dr. Ricardo Usbeck" ;
+    <http://xmlns.com/foaf/0.1/homepage> <http://aksw.org/RicardoUsbeck> ;
+    <http://xmlns.com/foaf/0.1/name> "Ricardo Usbeck" ;
+    <http://xmlns.com/foaf/0.1/title> "Prof. Dr." .
+
+<http://aksw.org/RoyMeissner>
+    <http://schema.org/affiliation> <https://infai.org/> ;
+    a <http://schema.org/Person>, <http://xmlns.com/foaf/0.1/Document>, <http://xmlns.com/foaf/0.1/Person> ;
+    <http://xmlns.com/foaf/0.1/homepage> <http://aksw.org/RoyMeissner> ;
+    <http://xmlns.com/foaf/0.1/name> "Roy Meissner" .
+
+<http://aksw.org/SabineGruenderFahrer>
+    <http://schema.org/affiliation> <https://infai.org/> ;
+    a <http://schema.org/Person>, <http://xmlns.com/foaf/0.1/Document>, <http://xmlns.com/foaf/0.1/Person> ;
+    <http://www.w3.org/2004/02/skos/core#prefLabel> "Dr. Sabine Gründer-Fahrer" ;
+    <http://xmlns.com/foaf/0.1/homepage> <http://aksw.org/SabineGruenderFahrer> ;
+    <http://xmlns.com/foaf/0.1/name> "Sabine Gründer-Fahrer" ;
+    <http://xmlns.com/foaf/0.1/title> "Dr." .
+
+<http://aksw.org/SebastianTramp>
+    <http://schema.org/affiliation> <https://www.eccenca.com/> ;
+    a <http://schema.org/Person>, <http://xmlns.com/foaf/0.1/Document>, <http://xmlns.com/foaf/0.1/Person> ;
+    <http://www.w3.org/2004/02/skos/core#prefLabel> "Dr. Sebastian Tramp" ;
+    <http://xmlns.com/foaf/0.1/homepage> <http://aksw.org/SebastianTramp> ;
+    <http://xmlns.com/foaf/0.1/name> "Sebastian Tramp" ;
+    <http://xmlns.com/foaf/0.1/title> "Dr." .
+
+<http://aksw.org/SimonBin>
+    <http://schema.org/affiliation> <https://infai.org/> ;
+    a <http://schema.org/Person>, <http://xmlns.com/foaf/0.1/Document>, <http://xmlns.com/foaf/0.1/Person> ;
+    <http://xmlns.com/foaf/0.1/homepage> <http://aksw.org/SimonBin> ;
+    <http://xmlns.com/foaf/0.1/name> "Simon Bin" .
+
+<http://aksw.org/SoerenAuer>
+    <http://schema.org/affiliation> <https://www.tib.eu/> ;
+    a <http://schema.org/Person>, <http://xmlns.com/foaf/0.1/Person> ;
+    <http://www.w3.org/2004/02/skos/core#prefLabel> "Prof. Dr. Sören Auer" ;
+    <http://xmlns.com/foaf/0.1/homepage> <https://www.tib.eu/en/research-development/research-groups-and-labs/data-science-digital-libraries/staff/soeren-auer> ;
+    <http://xmlns.com/foaf/0.1/name> "Sören Auer" ;
+    <http://xmlns.com/foaf/0.1/title> "Prof. Dr." .
+
+<https://aksw.org/KurtJunghanns>
+    a <http://xmlns.com/foaf/0.1/Document> .
+
+<../#AaronBowen>
+    <http://schema.org/affiliation> <https://www.wichita.edu/> ;
+    a <http://schema.org/Person>, <http://xmlns.com/foaf/0.1/Person> ;
+    <http://xmlns.com/foaf/0.1/name> "Aaron Bowen" .
+
+<../#AgnesMasipGomez>
+    <http://schema.org/affiliation> <https://www.infineon.com/> ;
+    a <http://schema.org/Person>, <http://xmlns.com/foaf/0.1/Person> ;
+    <http://xmlns.com/foaf/0.1/name> "Agnes Masip Gomez" .
+
+<../#AjitaRattani>
+    <http://schema.org/affiliation> <https://www.wichita.edu/> ;
+    a <http://schema.org/Person>, <http://xmlns.com/foaf/0.1/Person> ;
+    <http://xmlns.com/foaf/0.1/name> "Ajita Rattani" .
+
+<../#AlbertEckert>
+    <http://schema.org/affiliation> <https://siemens.com/> ;
+    a <http://schema.org/Person>, <http://xmlns.com/foaf/0.1/Person> ;
+    <http://xmlns.com/foaf/0.1/name> "Albert Eckert" .
+
+<../#AlexanderWillner>
+    <http://schema.org/affiliation> <https://www.ciss.de/> ;
+    a <http://schema.org/Person>, <http://xmlns.com/foaf/0.1/Person> ;
+    <http://www.w3.org/2004/02/skos/core#prefLabel> "Dr. Alexander Willner" ;
+    <http://xmlns.com/foaf/0.1/name> "Alexander Willner" ;
+    <http://xmlns.com/foaf/0.1/title> "Dr." .
+
+<../#AngelieKraft>
+    <http://schema.org/affiliation> <https://www.uni-hamburg.de/> ;
+    a <http://schema.org/Person>, <http://xmlns.com/foaf/0.1/Person> ;
+    <http://xmlns.com/foaf/0.1/homepage> <https://www.inf.uni-hamburg.de/en/inst/ab/sems/people/angelie-kraft.html> ;
+    <http://xmlns.com/foaf/0.1/name> "Angelie Kraft" .
+
+<../#AtriDutta>
+    <http://schema.org/affiliation> <https://www.wichita.edu/> ;
+    a <http://schema.org/Person>, <http://xmlns.com/foaf/0.1/Person> ;
+    <http://www.w3.org/2004/02/skos/core#prefLabel> "Prof. Dr. Atri Dutta" ;
+    <http://xmlns.com/foaf/0.1/homepage> <https://www.wichita.edu/academics/engineering/aerospace/atridutta/index.php> ;
+    <http://xmlns.com/foaf/0.1/name> "Atri Dutta" ;
+    <http://xmlns.com/foaf/0.1/title> "Prof. Dr." .
+
+<../#EvaHoerster>
+    <http://schema.org/affiliation> <https://www.datev.de/> ;
+    a <http://schema.org/Person>, <http://xmlns.com/foaf/0.1/Person> ;
+    <http://www.w3.org/2004/02/skos/core#prefLabel> "Dr. Eva Hoerster" ;
+    <http://xmlns.com/foaf/0.1/homepage> <https://www.linkedin.com/in/eva-hoerster-26a718190/?originalSubdomain=uk> ;
+    <http://xmlns.com/foaf/0.1/name> "Eva Hoerster" ;
+    <http://xmlns.com/foaf/0.1/title> "Dr." .
+
+<../#FawadKhan>
+    <http://schema.org/affiliation> <https://www.tib.eu/> ;
+    a <http://schema.org/Person>, <http://xmlns.com/foaf/0.1/Person> ;
+    <http://xmlns.com/foaf/0.1/name> "Fawad Khan" .
+
+<../#FelixEngel>
+    <http://schema.org/affiliation> <https://www.tib.eu/> ;
+    a <http://schema.org/Person>, <http://xmlns.com/foaf/0.1/Person> ;
+    <http://www.w3.org/2004/02/skos/core#prefLabel> "Dr.-Ing. Felix Engel" ;
+    <http://xmlns.com/foaf/0.1/name> "Felix Engel" ;
+    <http://xmlns.com/foaf/0.1/title> "Dr.-Ing." .
+
+<../#GlynRimmington>
+    <http://schema.org/affiliation> <https://www.wichita.edu/> ;
+    a <http://schema.org/Person>, <http://xmlns.com/foaf/0.1/Person> ;
+    <http://xmlns.com/foaf/0.1/name> "Glyn Rimmington" .
+
+<../#HansGertGraebe>
+    <http://schema.org/affiliation> <https://infai.org/> ;
+    a <http://schema.org/Person>, <http://xmlns.com/foaf/0.1/Person> ;
+    <http://www.w3.org/2004/02/skos/core#prefLabel> "Prof. Dr. Hans-Gert Gräbe" ;
+    <http://xmlns.com/foaf/0.1/name> "Hans-Gert Gräbe" ;
+    <http://xmlns.com/foaf/0.1/title> "Prof. Dr." .
+
+<../#JohannLoempcke>
+    <http://schema.org/affiliation> <https://iakleipzig.de/> ;
+    a <http://schema.org/Person>, <http://xmlns.com/foaf/0.1/Person> ;
+    <http://xmlns.com/foaf/0.1/name> "Johann Lömpcke" .
+
+<../#MartinHess>
+    <http://schema.org/affiliation> <https://www.infineon.com/> ;
+    a <http://schema.org/Person>, <http://xmlns.com/foaf/0.1/Person> ;
+    <http://xmlns.com/foaf/0.1/name> "Martin Heß" .
+
+<../#MartinSchneider>
+    <http://schema.org/affiliation> <https://iakleipzig.de/> ;
+    a <http://schema.org/Person>, <http://xmlns.com/foaf/0.1/Person> ;
+    <http://xmlns.com/foaf/0.1/name> "Martin Schneider" .
+
+<../#NenadKrdzavac>
+    <http://schema.org/affiliation> <https://www.tib.eu/> ;
+    a <http://schema.org/Person>, <http://xmlns.com/foaf/0.1/Person> ;
+    <http://xmlns.com/foaf/0.1/name> "Nenad Krdzavac" .
+
+<../#PhilippUlrich>
+    <http://schema.org/affiliation> <https://www.infineon.com/> ;
+    a <http://schema.org/Person>, <http://xmlns.com/foaf/0.1/Person> ;
+    <http://xmlns.com/foaf/0.1/name> "Philipp Ulrich" .
+
+<../#RichardFigura>
+    <http://schema.org/affiliation> <https://www.ciss.de/> ;
+    a <http://schema.org/Person>, <http://xmlns.com/foaf/0.1/Person> ;
+    <http://www.w3.org/2004/02/skos/core#prefLabel> "Dr. Richard Figura" ;
+    <http://xmlns.com/foaf/0.1/name> "Richard Figura" ;
+    <http://xmlns.com/foaf/0.1/title> "Dr." .
+
+<../#SaideshwarKota>
+    <http://schema.org/affiliation> <https://www.wichita.edu/> ;
+    a <http://schema.org/Person>, <http://xmlns.com/foaf/0.1/Person> ;
+    <http://xmlns.com/foaf/0.1/name> "Saideshwar Kota" .
+
+<../#SelinaMudrack>
+    <http://schema.org/affiliation> <https://sriw.de/> ;
+    a <http://schema.org/Person>, <http://xmlns.com/foaf/0.1/Person> ;
+    <http://xmlns.com/foaf/0.1/homepage> <https://sriw.de/> ;
+    <http://xmlns.com/foaf/0.1/name> "Selina Mudrack" .
+
+<../#SiavashGhiasvand>
+    <http://schema.org/affiliation> <https://tu-dresden.de/> ;
+    a <http://schema.org/Person>, <http://xmlns.com/foaf/0.1/Person> ;
+    <http://xmlns.com/foaf/0.1/name> "Siavash Ghiasvand" .
+
+<../#SmithaHaridasan>
+    <http://schema.org/affiliation> <https://www.wichita.edu/> ;
+    a <http://schema.org/Person>, <http://xmlns.com/foaf/0.1/Person> ;
+    <http://xmlns.com/foaf/0.1/name> "Smitha Haridasan" .
+
+<../#TheodorIsinger>
+    <http://schema.org/affiliation> <https://siemens.com/> ;
+    a <http://schema.org/Person>, <http://xmlns.com/foaf/0.1/Person> ;
+    <http://xmlns.com/foaf/0.1/name> "Theodor Isinger" .
+
+<../#TobiasGebel>
+    <http://schema.org/affiliation> <https://www.diw.de/de> ;
+    a <http://schema.org/Person>, <http://xmlns.com/foaf/0.1/Person> ;
+    <http://xmlns.com/foaf/0.1/homepage> <https://www.diw.de/de/diw_01.c.611027.de/personen/gebel__tobias.html> ;
+    <http://xmlns.com/foaf/0.1/name> "Tobias Gebel" .
+
+<../#TomRichardVargis>
+    <http://schema.org/affiliation> <https://tu-dresden.de/> ;
+    a <http://schema.org/Person>, <http://xmlns.com/foaf/0.1/Person> ;
+    <http://xmlns.com/foaf/0.1/name> "Tom Richard Vargis" .
+
+<../#YushanLiu>
+    <http://schema.org/affiliation> <https://siemens.com/> ;
+    a <http://schema.org/Person>, <http://xmlns.com/foaf/0.1/Person> ;
+    <http://xmlns.com/foaf/0.1/name> "Yushan Liu" .
+
+<../#ZelalemDemissie>
+    <http://schema.org/affiliation> <https://www.wichita.edu/> ;
+    a <http://schema.org/Person>, <http://xmlns.com/foaf/0.1/Person> ;
+    <http://xmlns.com/foaf/0.1/name> "Zelalem Demissie" .
+
+<>
+    <http://schema.org/subEvent> <#programm-session-1>, <#programm-session-2>, <#programm-session-3>, <#programm-session-4>, <#programm-session-5>, <#programm-talk-10>, <#programm-talk-15>, <#programm-talk-5> ;
+    a <https://vocab.eccenca.com/di/Dataset> .
+
+<#programm-session-1>
+    <http://purl.org/dc/terms/title> "Session I"@de, "Session I"@en ;
+    <http://schema.org/endTime> "10:30:00.000"^^<http://www.w3.org/2001/XMLSchema#time> ;
+    <http://schema.org/location> <../venue#Sitzungssaal> ;
+    <http://schema.org/performer> <http://aksw.org/SebastianTramp> ;
+    <http://schema.org/startTime> "09:15:00.000"^^<http://www.w3.org/2001/XMLSchema#time> ;
+    <http://schema.org/subEvent> <#programm-talk-1>, <#programm-talk-2>, <#programm-talk-3>, <#programm-talk-4> ;
+    a <http://schema.org/Event> .
+
+<#programm-session-12>
+    <http://schema.org/subEvent> <#programm-talk-28> .
+
+<#programm-session-16>
+    <http://schema.org/subEvent> <#programm-talk-27> .
+
+<#programm-session-2>
+    <http://purl.org/dc/terms/title> "Session II"@de, "Session II"@en ;
+    <http://schema.org/endTime> "12:00:00.000"^^<http://www.w3.org/2001/XMLSchema#time> ;
+    <http://schema.org/location> <../venue#Sitzungssaal> ;
+    <http://schema.org/performer> <http://aksw.org/SabineGruenderFahrer> ;
+    <http://schema.org/startTime> "11:00:00.000"^^<http://www.w3.org/2001/XMLSchema#time> ;
+    <http://schema.org/subEvent> <#programm-talk-6>, <#programm-talk-7>, <#programm-talk-8>, <#programm-talk-9> ;
+    a <http://schema.org/Event> .
+
+<#programm-session-3>
+    <http://purl.org/dc/terms/title> "Session III"@de, "Session III"@en ;
+    <http://schema.org/endTime> "14:30:00.000"^^<http://www.w3.org/2001/XMLSchema#time> ;
+    <http://schema.org/location> <../venue#Sitzungssaal> ;
+    <http://schema.org/performer> <http://aksw.org/AntoninDelpeuch> ;
+    <http://schema.org/startTime> "13:00:00.000"^^<http://www.w3.org/2001/XMLSchema#time> ;
+    <http://schema.org/subEvent> <#programm-talk-11>, <#programm-talk-12>, <#programm-talk-13>, <#programm-talk-14> ;
+    a <http://schema.org/Event> .
+
+<#programm-session-4>
+    <http://purl.org/dc/terms/title> "Session IV"@de, "Session IV"@en ;
+    <http://schema.org/endTime> "15:45:00.000"^^<http://www.w3.org/2001/XMLSchema#time> ;
+    <http://schema.org/location> <../venue#Sitzungssaal> ;
+    <http://schema.org/performer> <http://aksw.org/RoyMeissner> ;
+    <http://schema.org/startTime> "15:00:00.000"^^<http://www.w3.org/2001/XMLSchema#time> ;
+    <http://schema.org/subEvent> <#programm-talk-16>, <#programm-talk-17>, <#programm-talk-18> ;
+    a <http://schema.org/Event> .
+
+<#programm-session-5>
+    <http://purl.org/dc/terms/title> "Invited Contribution from the LSWT2023"@en ;
+    <http://schema.org/endTime> "23:15:00.000"^^<http://www.w3.org/2001/XMLSchema#time> ;
+    <http://schema.org/startTime> "23:00:00.000"^^<http://www.w3.org/2001/XMLSchema#time> ;
+    <http://schema.org/subEvent> <#programm-talk-19> ;
+    a <http://schema.org/Event> .
+
+<#programm-talk-1>
+    <http://purl.org/dc/terms/title> "The Ethical Risks of Analyzing Crisis Events on Social Media with Machine Learning"@de, "The Ethical Risks of Analyzing Crisis Events on Social Media with Machine Learning"@en ;
+    <http://schema.org/endTime> "09:35:00.000"^^<http://www.w3.org/2001/XMLSchema#time> ;
+    <http://schema.org/performer> <http://aksw.org/RicardoUsbeck>, <../#AngelieKraft> ;
+    <http://schema.org/startTime> "09:15:00.000"^^<http://www.w3.org/2001/XMLSchema#time> ;
+    a <http://schema.org/Event>, <../#Keynote> .
+
+<#programm-talk-10>
+    <http://ns.ontowiki.net/SysOnt/Site/track> <../#pause> ;
+    <http://purl.org/dc/terms/title> "Lunch Break"@en, "Mittagessen"@de ;
+    <http://schema.org/endTime> "13:00:00.000"^^<http://www.w3.org/2001/XMLSchema#time> ;
+    <http://schema.org/location> <../venue#Wandelhalle> ;
+    <http://schema.org/startTime> "12:00:00.000"^^<http://www.w3.org/2001/XMLSchema#time> ;
+    a <http://schema.org/Event> .
+
+<#programm-talk-11>
+    <http://purl.org/dc/terms/title> "Früherkennung möglicher Versorgungsstörungen durch die Analyse tiefer Lieferketten (Deep Supply Chains)"@de, "Früherkennung möglicher Versorgungsstörungen durch die Analyse tiefer Lieferketten (Deep Supply Chains)"@en ;
+    <http://schema.org/endTime> "13:20:00.000"^^<http://www.w3.org/2001/XMLSchema#time> ;
+    <http://schema.org/performer> <../#EvaHoerster> ;
+    <http://schema.org/startTime> "13:00:00.000"^^<http://www.w3.org/2001/XMLSchema#time> ;
+    a <http://schema.org/Event>, <../#Keynote> .
+
+<#programm-talk-12>
+    <http://purl.org/dc/terms/title> "Resilienzfaktoren von Wertschöpfungsketten in der Agrar- und Ernährungsbranche am Beispiel der Pflanzenölproduktion"@de, "Resilienzfaktoren von Wertschöpfungsketten in der Agrar- und Ernährungsbranche am Beispiel der Pflanzenölproduktion"@en ;
+    <http://schema.org/endTime> "13:35:00.000"^^<http://www.w3.org/2001/XMLSchema#time> ;
+    <http://schema.org/performer> <../#JohannLoempcke>, <../#MartinSchneider> ;
+    <http://schema.org/startTime> "13:20:00.000"^^<http://www.w3.org/2001/XMLSchema#time> ;
+    a <http://schema.org/Event> .
+
+<#programm-talk-13>
+    <http://purl.org/dc/terms/title> "Multispectral Deep Learning Models for Wildfire Detection"@de, "Multispectral Deep Learning Models for Wildfire Detection"@en ;
+    <http://schema.org/endTime> "13:50:00.000"^^<http://www.w3.org/2001/XMLSchema#time> ;
+    <http://schema.org/performer> <../#AjitaRattani>, <../#AtriDutta>, <../#SmithaHaridasan>, <../#ZelalemDemissie> ;
+    <http://schema.org/startTime> "13:35:00.000"^^<http://www.w3.org/2001/XMLSchema#time> ;
+    a <http://schema.org/Event> .
+
+<#programm-talk-14>
+    <http://purl.org/dc/terms/title> "Multimodal Combination of Text and Image Tweets for Disaster Response Assessment"@de, "Multimodal Combination of Text and Image Tweets for Disaster Response Assessment"@en ;
+    <http://schema.org/endTime> "14:05:00.000"^^<http://www.w3.org/2001/XMLSchema#time> ;
+    <http://schema.org/performer> <../#AaronBowen>, <../#AjitaRattani>, <../#AtriDutta>, <../#GlynRimmington>, <../#SaideshwarKota>, <../#SmithaHaridasan> ;
+    <http://schema.org/startTime> "13:50:00.000"^^<http://www.w3.org/2001/XMLSchema#time> ;
+    a <http://schema.org/Event> .
+
+<#programm-talk-15>
+    <http://ns.ontowiki.net/SysOnt/Site/track> <../#pause> ;
+    <http://purl.org/dc/terms/title> "Coffee Break"@en, "Kaffee Pause"@de ;
+    <http://schema.org/endTime> "15:00:00.000"^^<http://www.w3.org/2001/XMLSchema#time> ;
+    <http://schema.org/location> <../venue#Wandelhalle> ;
+    <http://schema.org/startTime> "14:30:00.000"^^<http://www.w3.org/2001/XMLSchema#time> ;
+    a <http://schema.org/Event> .
+
+<#programm-talk-16>
+    <http://purl.org/dc/terms/title> "Semantic-Aware Metadata and Resilience of Socio-Cultural Systems"@de, "Semantic-Aware Metadata and Resilience of Socio-Cultural Systems"@en ;
+    <http://schema.org/endTime> "15:15:00.000"^^<http://www.w3.org/2001/XMLSchema#time> ;
+    <http://schema.org/performer> <../#HansGertGraebe> ;
+    <http://schema.org/startTime> "15:00:00.000"^^<http://www.w3.org/2001/XMLSchema#time> ;
+    a <http://schema.org/Event> .
+
+<#programm-talk-17>
+    <http://purl.org/dc/terms/title> "Challenges for Achieving Supply Chain Resilience and Transparency within CoyPu"@de, "Challenges for Achieving Supply Chain Resilience and Transparency within CoyPu"@en ;
+    <http://schema.org/endTime> "15:30:00.000"^^<http://www.w3.org/2001/XMLSchema#time> ;
+    <http://schema.org/performer> <http://aksw.org/MichaelMartin>, <../#AgnesMasipGomez>, <../#AlbertEckert>, <../#MartinHess>, <../#PhilippUlrich>, <../#TheodorIsinger>, <../#YushanLiu> ;
+    <http://schema.org/startTime> "15:15:00.000"^^<http://www.w3.org/2001/XMLSchema#time> ;
+    a <http://schema.org/Event> .
+
+<#programm-talk-18>
+    <http://purl.org/dc/terms/title> "Challenges in the Creation and Uptake of Ontologies"@de, "Challenges in the Creation and Uptake of Ontologies"@en ;
+    <http://schema.org/endTime> "15:45:00.000"^^<http://www.w3.org/2001/XMLSchema#time> ;
+    <http://schema.org/performer> <http://aksw.org/SoerenAuer>, <../#FelixEngel> ;
+    <http://schema.org/startTime> "15:30:00.000"^^<http://www.w3.org/2001/XMLSchema#time> ;
+    a <http://schema.org/Event> .
+
+<#programm-talk-19>
+    <http://purl.org/dc/terms/title> "Collaborative and cross-stakeholder ontology engineering"@de, "Collaborative and cross-stakeholder ontology engineering"@en ;
+    <http://schema.org/endTime> "23:15:00.000"^^<http://www.w3.org/2001/XMLSchema#time> ;
+    <http://schema.org/performer> <http://aksw.org/SoerenAuer>, <../#FawadKhan>, <../#FelixEngel>, <../#NenadKrdzavac> ;
+    <http://schema.org/startTime> "23:00:00.000"^^<http://www.w3.org/2001/XMLSchema#time> ;
+    a <http://schema.org/Event> .
+
+<#programm-talk-2>
+    <http://purl.org/dc/terms/title> "Overview of Data-Driven Hazard-Detection Technology Research at WSU’s Disaster Resilience Analytics Center for Enhancing Community Resilience"@de, "Overview of Data-Driven Hazard-Detection Technology Research at WSU’s Disaster Resilience Analytics Center for Enhancing Community Resilience"@en ;
+    <http://schema.org/endTime> "09:55:00.000"^^<http://www.w3.org/2001/XMLSchema#time> ;
+    <http://schema.org/performer> <../#AtriDutta> ;
+    <http://schema.org/startTime> "09:35:00.000"^^<http://www.w3.org/2001/XMLSchema#time> ;
+    a <http://schema.org/Event>, <../#Keynote> .
+
+<#programm-talk-27>
+    <http://purl.org/dc/terms/title> "paper"@en ;
+    a <http://schema.org/Event> .
+
+<#programm-talk-28>
+    <http://purl.org/dc/terms/title> "20 min slots"@en ;
+    a <http://schema.org/Event> .
+
+<#programm-talk-3>
+    <http://purl.org/dc/terms/title> "The Coypu Platform Data Integration Workflow"@de, "The Coypu Platform Data Integration Workflow"@en ;
+    <http://schema.org/endTime> "10:10:00.000"^^<http://www.w3.org/2001/XMLSchema#time> ;
+    <http://schema.org/performer> <http://aksw.org/NatanaelArndt> ;
+    <http://schema.org/startTime> "09:55:00.000"^^<http://www.w3.org/2001/XMLSchema#time> ;
+    a <http://schema.org/Event> .
+
+<#programm-talk-4>
+    <http://purl.org/dc/terms/title> "Semantification of Geospatial Information for Enriched Knowledge Representation in Context of Crisis Informatics"@de, "Semantification of Geospatial Information for Enriched Knowledge Representation in Context of Crisis Informatics"@en ;
+    <http://schema.org/endTime> "10:30:00.000"^^<http://www.w3.org/2001/XMLSchema#time> ;
+    <http://schema.org/performer> <http://aksw.org/ClausStadler>, <http://aksw.org/KurtJunghanns>, <http://aksw.org/LorenzBuehmann>, <http://aksw.org/MichaelMartin>, <http://aksw.org/NormanRadtke>, <http://aksw.org/SabineGruenderFahrer>, <http://aksw.org/SimonBin> ;
+    <http://schema.org/startTime> "10:10:00.000"^^<http://www.w3.org/2001/XMLSchema#time> ;
+    a <http://schema.org/Event>, <../#Keynote> .
+
+<#programm-talk-5>
+    <http://ns.ontowiki.net/SysOnt/Site/track> <../#pause> ;
+    <http://purl.org/dc/terms/title> "Coffee Break "@en, "Kaffee Pause"@de ;
+    <http://schema.org/endTime> "11:00:00.000"^^<http://www.w3.org/2001/XMLSchema#time> ;
+    <http://schema.org/location> <../venue#Wandelhalle> ;
+    <http://schema.org/startTime> "10:30:00.000"^^<http://www.w3.org/2001/XMLSchema#time> ;
+    a <http://schema.org/Event> .
+
+<#programm-talk-6>
+    <http://purl.org/dc/terms/title> "Assessing Anonymized System Logs Usefulness for Behavioral Analysis in RNN Models"@de, "Assessing Anonymized System Logs Usefulness for Behavioral Analysis in RNN Models"@en ;
+    <http://schema.org/endTime> "11:20:00.000"^^<http://www.w3.org/2001/XMLSchema#time> ;
+    <http://schema.org/performer> <../#SiavashGhiasvand>, <../#TomRichardVargis> ;
+    <http://schema.org/startTime> "11:00:00.000"^^<http://www.w3.org/2001/XMLSchema#time> ;
+    a <http://schema.org/Event>, <../#Keynote> .
+
+<#programm-talk-7>
+    <http://purl.org/dc/terms/title> "Der Krisenbegriff und dessen Implikation für Entwicklung von intelligenten Werkzeugen zur Krisenprävention und zum Krisenmanagement"@de, "Der Krisenbegriff und dessen Implikation für Entwicklung von intelligenten Werkzeugen zur Krisenprävention und zum Krisenmanagement"@en ;
+    <http://schema.org/endTime> "11:35:00.000"^^<http://www.w3.org/2001/XMLSchema#time> ;
+    <http://schema.org/performer> <../#SelinaMudrack>, <../#TobiasGebel> ;
+    <http://schema.org/startTime> "11:20:00.000"^^<http://www.w3.org/2001/XMLSchema#time> ;
+    a <http://schema.org/Event> .
+
+<#programm-talk-8>
+    <http://purl.org/dc/terms/title> "A lightweight citizens information portal for extreme weather events"@de, "A lightweight citizens information portal for extreme weather events"@en ;
+    <http://schema.org/endTime> "11:45:00.000"^^<http://www.w3.org/2001/XMLSchema#time> ;
+    <http://schema.org/performer> <../#AlexanderWillner>, <../#RichardFigura> ;
+    <http://schema.org/startTime> "11:35:00.000"^^<http://www.w3.org/2001/XMLSchema#time> ;
+    a <http://schema.org/Event> .
+
+<#programm-talk-9>
+    <http://purl.org/dc/terms/title> "FAIR – A project to make weather information more usable"@de, "FAIR – A project to make weather information more usable"@en ;
+    <http://schema.org/endTime> "12:00:00.000"^^<http://www.w3.org/2001/XMLSchema#time> ;
+    <http://schema.org/performer> <../#AlexanderWillner>, <../#RichardFigura> ;
+    <http://schema.org/startTime> "11:45:00.000"^^<http://www.w3.org/2001/XMLSchema#time> ;
+    a <http://schema.org/Event> .
+
+<../venue#LivingLab>
+    <http://purl.org/dc/terms/description> """ScaDS.AI  Büro Leipzig<br/>
+Löhrs Carré<br/>
+Humboldtstraße 25,<br/>
+3. Obergeschoss<br/>
+04105 Leipzig"""@de, """ScaDS.AI Leipzig Office<br/>
+Löhrs Carré<br/>
+Humboldtstraße 25<br/>
+3rd floor<br/>
+04105 Leipzig"""@en ;
+    <http://purl.org/dc/terms/title> "Living Lab" .
+
+<../venue#Ratsplenarsaal>
+    <http://purl.org/dc/terms/description> """Neues Rathaus<br/>
+1.OG<br/>
+Martin-Luther-Ring 4 - 6<br/>
+04109 Leipzig<br/>"""@de, """Neues Rathaus<br/>
+1.OG<br/>
+Martin-Luther-Ring 4 - 6<br/>
+04109 Leipzig<br/>"""@en ;
+    <http://purl.org/dc/terms/title> "Ratsplenarsaal" .
+
+<../venue#Sitzungssaal>
+    <http://purl.org/dc/terms/description> """Neues Rathaus<br/>
+1.OG<br/>
+Martin-Luther-Ring 4 - 6<br/>
+04109 Leipzig<br/>"""@de, """Neues Rathaus<br/>
+1.OG<br/>
+Martin-Luther-Ring 4 - 6<br/>
+04109 Leipzig<br/>"""@en ;
+    <http://purl.org/dc/terms/title> "Sitzungssaal" .
+
+<../venue#Wandelhalle>
+    <http://purl.org/dc/terms/description> """Neues Rathaus<br/>
+1.OG<br/>
+Martin-Luther-Ring 4 - 6<br/>
+04109 Leipzig<br/>"""@de, """Neues Rathaus<br/>
+1.OG<br/>
+Martin-Luther-Ring 4 - 6<br/>
+04109 Leipzig<br/>"""@en ;
+    <http://purl.org/dc/terms/title> "Wandelhalle" .
+
+<https://iakleipzig.de/>
+    a <http://xmlns.com/foaf/0.1/Document>, <http://xmlns.com/foaf/0.1/Organization> ;
+    <http://www.w3.org/2000/01/rdf-schema#label> "IAK Agrar Consulting GmbH"@de, "IAK Agrar Consulting GmbH"@en ;
+    <http://xmlns.com/foaf/0.1/homepage> <https://iakleipzig.de/> .
+
+<https://infai.org/>
+    a <http://xmlns.com/foaf/0.1/Document>, <http://xmlns.com/foaf/0.1/Organization> ;
+    <http://www.w3.org/2000/01/rdf-schema#label> "Institut für Angewandte Informatik e.V."@de, "Institute for Applied Informatics"@en ;
+    <http://xmlns.com/foaf/0.1/homepage> <https://infai.org/> .
+
+<https://siemens.com/>
+    a <http://xmlns.com/foaf/0.1/Document>, <http://xmlns.com/foaf/0.1/Organization> ;
+    <http://www.w3.org/2000/01/rdf-schema#label> "Siemens AG"@de, "Siemens AG"@en ;
+    <http://xmlns.com/foaf/0.1/homepage> <https://siemens.com/> .
+
+<https://sriw.de/>
+    a <http://xmlns.com/foaf/0.1/Document>, <http://xmlns.com/foaf/0.1/Organization> ;
+    <http://www.w3.org/2000/01/rdf-schema#label> """Selbstregulierung Informationswirtschaft e.V. (SRIW)
+"""@de, "Self-regulation Information Industry e.V. (SRIW)"@en ;
+    <http://xmlns.com/foaf/0.1/homepage> <https://sriw.de/> .
+
+<https://tu-dresden.de/>
+    a <http://xmlns.com/foaf/0.1/Document>, <http://xmlns.com/foaf/0.1/Organization> ;
+    <http://www.w3.org/2000/01/rdf-schema#label> "Technische Universität Dresden"@de, "Technische Universität Dresden"@en ;
+    <http://xmlns.com/foaf/0.1/homepage> <https://tu-dresden.de/> .
+
+<https://www.ciss.de>
+    a <http://xmlns.com/foaf/0.1/Document> .
+
+<https://www.ciss.de/>
+    a <http://xmlns.com/foaf/0.1/Organization> ;
+    <http://www.w3.org/2000/01/rdf-schema#label> "CISS TDI GmbH"@de, "CISS TDI GmbH"@en ;
+    <http://xmlns.com/foaf/0.1/homepage> <https://www.ciss.de> .
+
+<https://www.datev.de/>
+    a <http://xmlns.com/foaf/0.1/Document>, <http://xmlns.com/foaf/0.1/Organization> ;
+    <http://www.w3.org/2000/01/rdf-schema#label> "DATEV eG"@de, "DATEV eG"@en ;
+    <http://xmlns.com/foaf/0.1/homepage> <https://www.datev.de/> .
+
+<https://www.diw.de/de>
+    a <http://xmlns.com/foaf/0.1/Document>, <http://xmlns.com/foaf/0.1/Organization> ;
+    <http://www.w3.org/2000/01/rdf-schema#label> "DIW Berlin"@de, "DIW Berlin"@en ;
+    <http://xmlns.com/foaf/0.1/homepage> <https://www.diw.de/de> .
+
+<https://www.diw.de/de/diw_01.c.611027.de/personen/gebel__tobias.html>
+    a <http://xmlns.com/foaf/0.1/Document> .
+
+<https://www.eccenca.com/>
+    a <http://xmlns.com/foaf/0.1/Document>, <http://xmlns.com/foaf/0.1/Organization> ;
+    <http://www.w3.org/2000/01/rdf-schema#label> "eccenca GmbH"@de, "eccenca GmbH"@en ;
+    <http://xmlns.com/foaf/0.1/homepage> <https://www.eccenca.com/> .
+
+<https://www.inf.uni-hamburg.de/en/inst/ab/sems/people/angelie-kraft.html>
+    a <http://xmlns.com/foaf/0.1/Document> .
+
+<https://www.infineon.com/>
+    a <http://xmlns.com/foaf/0.1/Document>, <http://xmlns.com/foaf/0.1/Organization> ;
+    <http://www.w3.org/2000/01/rdf-schema#label> "Infineon Technologies AG"@de, "Infineon Technologies AG"@en ;
+    <http://xmlns.com/foaf/0.1/homepage> <https://www.infineon.com/> .
+
+<https://www.linkedin.com/in/eva-hoerster-26a718190/?originalSubdomain=uk>
+    a <http://xmlns.com/foaf/0.1/Document> .
+
+<https://www.tib.eu/>
+    a <http://xmlns.com/foaf/0.1/Document>, <http://xmlns.com/foaf/0.1/Organization> ;
+    <http://www.w3.org/2000/01/rdf-schema#label> "Technische Informationsbibliothek (TIB)"@de, "Technische Informationsbibliothek (TIB)"@en ;
+    <http://xmlns.com/foaf/0.1/homepage> <https://www.tib.eu/> .
+
+<https://www.tib.eu/en/research-development/research-groups-and-labs/data-science-digital-libraries/staff/soeren-auer>
+    a <http://xmlns.com/foaf/0.1/Document> .
+
+<https://www.uni-hamburg.de>
+    a <http://xmlns.com/foaf/0.1/Document> .
+
+<https://www.uni-hamburg.de/>
+    a <http://xmlns.com/foaf/0.1/Organization> ;
+    <http://www.w3.org/2000/01/rdf-schema#label> "University of Hamburg"@de, "University of Hamburg"@en ;
+    <http://xmlns.com/foaf/0.1/homepage> <https://www.uni-hamburg.de> .
+
+<https://www.uni-leipzig.de/>
+    a <http://xmlns.com/foaf/0.1/Document>, <http://xmlns.com/foaf/0.1/Organization> ;
+    <http://www.w3.org/2000/01/rdf-schema#label> "Leipzig University"@en, "Universität Leipzig"@de ;
+    <http://xmlns.com/foaf/0.1/homepage> <https://www.uni-leipzig.de/> .
+
+<https://www.wichita.edu>
+    a <http://xmlns.com/foaf/0.1/Document> .
+
+<https://www.wichita.edu/>
+    a <http://xmlns.com/foaf/0.1/Organization> ;
+    <http://www.w3.org/2000/01/rdf-schema#label> "Wichita State University"@de, "Wichita State University"@en ;
+    <http://xmlns.com/foaf/0.1/homepage> <https://www.wichita.edu> .
+
+<https://www.wichita.edu/academics/engineering/aerospace/atridutta/index.php>
+    a <http://xmlns.com/foaf/0.1/Document> .
+
+<urn:url-encoded-value:unset>
+    a <http://xmlns.com/foaf/0.1/Organization> .
+

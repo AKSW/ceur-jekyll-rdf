@@ -53,3 +53,8 @@ tasks:
     desc: Verify the graphs syntax is correct
     cmds:
       - rapper -c -i turtle graph.ttl
+
+  graph:get-program:
+    desc: Get the program from cmem
+    cmds:
+      - cmemc -c aksw.eccenca.dev graph export https://dataweek.de/d2r2-22/ | rapper -i turtle -o turtle - https://dataweek.de/d2r2-22/ > paper.ttl
