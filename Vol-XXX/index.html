@@ -368,15 +368,35 @@ Summary: There were <span class="CEURSUBMITTEDPAPERS">{{CEURSUBMITTEDPAPERS}}</s
 {%- assign authors = paper.entity | rdf_property: "schema:performer", nil, true -%}
 {%- endunless -%}
 {%- assign track = "" -%}
+{%- assign language = "" -%}
 {% assign isKeynote = paper.entity | sparql_query: "select ?entity { ?entity rdf:type dw:Keynote . filter(?entity = ?resourceUri) }" %}
 {% assign isInvited = paper.entity | sparql_query: "select ?entity { ?entity rdf:type dw:InvitedPaper . filter(?entity = ?resourceUri) }" %}
+{% assign isShort = paper.entity | sparql_query: "select ?entity { ?entity rdf:type dw:ShortPaper . filter(?entity = ?resourceUri) }" %}
+{% assign isAbstract = paper.entity | sparql_query: "select ?entity { ?entity rdf:type dw:Abstract . filter(?entity = ?resourceUri) }" %}
 {% if isKeynote.first %}
 {%- assign track = " (keynote)" -%}
 {% elsif isInvited.first %}
 {%- assign track = " (invited paper)" -%}
+{% elsif isAbstract.first %}
+{%- assign track = " (abstract)" -%}
+{% elsif isShort.first %}
+{%- assign track = " (short paper)" -%}
+{% endif %}
+{%- capture language_query -%}
+select ?label {
+  ?resourceUri schema:availableLanguage ?language .
+  filter(?language != <http://lexvo.org/id/iso639-3/eng>)
+  ?language rdfs:label ?label .
+  filter(langMatches(lang(?label), "{{site.language}}"))
+}
+{%- endcapture -%}
+{% assign language_res = paper.entity | sparql_query: language_query %}
+{% if language_res.first %}
+hallo
+{%- assign language = " (" | append: language_res.first.label | append: ")" -%}
 {% endif %}
 <li id="paper5"><a href="paper5.pdf">
-<span class="CEURTITLE">{{CEURTITLE | umlaut_escape}}{{track}}</span></a>
+<span class="CEURTITLE">{{CEURTITLE | umlaut_escape}}{{track}}</span></a>{{language}}
 {%- comment -%}<span class="CEURPAGES">{{CEURPAGES}}</span>{%- endcomment -%}
 <br>
 {%- for author in authors -%}

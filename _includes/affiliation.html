@@ -4,5 +4,10 @@
 {%- unless label -%}
 {%- assign label = affiliation | rdf_property: "rdfs:label" -%}
 {%- endunless -%}
-<a href="{{homepage}}">{{label}}</a>,
-  Faculty of Research, 9999 Novocity, Country
+{%- assign location = affiliation | rdf_property: "schema:location" -%}
+{%- assign location_name = location | rdf_property: "schema:name" -%}
+{%- assign location_street = location | rdf_property: "schema:streetAddress" -%}
+<a href="{{homepage}}">{{label}}</a>
+{%- if location -%}
+, {% if location_name %}{{location_name}}, {% endif -%}{% if location_street %}{{location_street}}, {% endif -%}{{ location | rdf_property: "schema:postalCode" }} {{ location | rdf_property: "schema:addressLocality" }}, {{ location | rdf_property: "schema:addressCountry" }}
+{%- endif -%}
