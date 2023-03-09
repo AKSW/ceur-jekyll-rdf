@@ -3,8 +3,6 @@ rdf_prefix_path: "_data/prefixes.sparql"
 ---
 {%- assign rootResource = site.rootResource | rdf_get -%}
 {%- assign development = site.development -%}
-{%- assign keynote_type = "dw:Keynote" | rdf_get -%}
-{%- assign invited_type = "dw:InvitedPaper" | rdf_get -%}
 
 {%- comment -%}
 The following variables need to be adapted by you:
@@ -370,18 +368,13 @@ Summary: There were <span class="CEURSUBMITTEDPAPERS">{{CEURSUBMITTEDPAPERS}}</s
 {%- assign authors = paper.entity | rdf_property: "schema:performer", nil, true -%}
 {%- endunless -%}
 {%- assign track = "" -%}
-{% assign typelist = paper.entity | rdf_property: "rdf:type", nil, true %}
-{% assign isKeynote = false %}
-{% assign isInvited = false %}
-{% for type in typelist %}
-{% if type == keynote_type%}
+{% assign isKeynote = paper.entity | sparql_query: "select ?entity { ?entity rdf:type dw:Keynote . filter(?entity = ?resourceUri) }" %}
+{% assign isInvited = paper.entity | sparql_query: "select ?entity { ?entity rdf:type dw:InvitedPaper . filter(?entity = ?resourceUri) }" %}
+{% if isKeynote.first %}
 {%- assign track = " (keynote)" -%}
-{% break %}
-{% elsif type == invited_type %}
+{% elsif isInvited.first %}
 {%- assign track = " (invited paper)" -%}
-{% break %}
 {% endif %}
-{% endfor %}
 <li id="paper5"><a href="paper5.pdf">
 <span class="CEURTITLE">{{CEURTITLE | umlaut_escape}}{{track}}</span></a>
 {%- comment -%}<span class="CEURPAGES">{{CEURPAGES}}</span>{%- endcomment -%}
