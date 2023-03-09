@@ -171,13 +171,29 @@ aksw:Group
     a schema:Organization, foaf:Document, foaf:Organization ;
     rdfs:label "Institut für Angewandte Informatik e.V."@de, "Institute for Applied Informatics"@en ;
     foaf:homepage <https://infai.org/> ;
-    foaf:logo "/images/partner/InfAI_small.svg" .
+    foaf:logo "/images/partner/InfAI_small.svg" ;
+    schema:location <https://infai.org/#address> .
+
+<https://infai.org/#address>
+    schema:addressCountry "Germany" ;
+    schema:addressLocality "Leipzig" ;
+    schema:postalCode "04109" ;
+    schema:streetAddress "Goerdelerring 9" ;
+    a schema:PostalAddress .
 
 <https://www.eccenca.com/>
     a schema:Organization, foaf:Document, foaf:Organization ;
     rdfs:label "eccenca GmbH", "eccenca GmbH"@de, "eccenca GmbH"@en ;
     foaf:homepage <https://www.eccenca.com/> ;
-    foaf:logo dw:LogoEccenca .
+    foaf:logo dw:LogoEccenca ;
+    schema:location <https://www.eccenca.com/#address> .
+
+<https://www.eccenca.com/#address>
+    schema:addressCountry "Germany" ;
+    schema:addressLocality "Leipzig" ;
+    schema:postalCode "04109" ;
+    schema:streetAddress " Hainstraße 8" ;
+    a schema:PostalAddress .
 
 <https://dataweek.de/d2r2-22/#cfp>
     dct:description """

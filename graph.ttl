@@ -347,7 +347,7 @@ We invite contributions of novel results and ongoing work as well as position pa
     schema:logo <logo.png> ;
     schema:organizer <#Team> ;
     schema:recordedIn <https://www.youtube.com/watch?v=NA5-XYX5Kbo> ;
-    schema:subEvent <#programm-session-1>, <#programm-session-2>, <#programm-session-3>, <#programm-session-4>, <#programm-session-5>, <#programm-talk-10>, <#programm-talk-15>, <#programm-talk-25>, <#programm-talk-26>, <#programm-talk-29>, <#programm-talk-5> ;
+    schema:subEvent <#programm-session-1>, <#programm-session-2>, <#programm-session-3>, <#programm-session-4>, <#programm-session-5>, <#programm-talk-10>, <#programm-talk-15>, <#programm-talk-5> ;
     vivo:hasProceedings <#proceedings> ;
     a bibo:Conference, schema:Event, foaf:Document, <https://vocab.eccenca.com/di/Dataset> ;
     rdfs:label "International Workshop on Data-driven Resilience Research 2022"@de, "International Workshop on Data-driven Resilience Research 2022"@en ;
@@ -545,21 +545,6 @@ We invite contributions of novel results and ongoing work as well as position pa
 <#programm-authors-24>
     a rdfs:Class .
 
-<#programm-authors-25>
-    a rdfs:Class .
-
-<#programm-authors-26>
-    a rdfs:Class .
-
-<#programm-authors-27>
-    a rdfs:Class .
-
-<#programm-authors-28>
-    a rdfs:Class .
-
-<#programm-authors-29>
-    a rdfs:Class .
-
 <#programm-authors-3>
     rdf:_1 aksw:NatanaelArndt ;
     a rdfs:Class .
@@ -605,12 +590,6 @@ We invite contributions of novel results and ongoing work as well as position pa
     schema:startTime "09:15:00.000"^^xsd:time ;
     schema:subEvent <#programm-talk-1>, <#programm-talk-2>, <#programm-talk-3>, <#programm-talk-4> ;
     a schema:Event .
-
-<#programm-session-12>
-    schema:subEvent <#programm-talk-28> .
-
-<#programm-session-16>
-    schema:subEvent <#programm-talk-27> .
 
 <#programm-session-2>
     dct:title "Session II"@de, "Session II"@en ;
@@ -672,10 +651,11 @@ We invite contributions of novel results and ongoing work as well as position pa
 
 <#programm-talk-12>
     dct:title "Resilienzfaktoren von Wertschöpfungsketten in der Agrar- und Ernährungsbranche am Beispiel der Pflanzenölproduktion"@de, "Resilienzfaktoren von Wertschöpfungsketten in der Agrar- und Ernährungsbranche am Beispiel der Pflanzenölproduktion"@en ;
+    schema:availableLanguage <http://lexvo.org/id/iso639-3/deu> ;
     schema:endTime "13:35:00.000"^^xsd:time ;
     schema:performer dw:JohannLoempcke, dw:MartinSchneider, <#programm-authors-12> ;
     schema:startTime "13:20:00.000"^^xsd:time ;
-    a schema:Event .
+    a schema:Event, dw:InvitedPaper .
 
 <#programm-talk-13>
     dct:title "Multispectral Deep Learning Models for Wildfire Detection"@de, "Multispectral Deep Learning Models for Wildfire Detection"@en ;
@@ -712,57 +692,35 @@ We invite contributions of novel results and ongoing work as well as position pa
     schema:endTime "15:30:00.000"^^xsd:time ;
     schema:performer aksw:MichaelMartin, dw:AgnesMasipGomez, dw:AlbertEckert, dw:MartinHess, dw:PhilippUlrich, dw:TheodorIsinger, dw:YushanLiu, <#programm-authors-17> ;
     schema:startTime "15:15:00.000"^^xsd:time ;
-    a schema:Event .
+    a schema:Event, dw:InvitedPaper .
 
 <#programm-talk-18>
     dct:title "Challenges in the Creation and Uptake of Ontologies"@de, "Challenges in the Creation and Uptake of Ontologies"@en ;
     schema:endTime "15:45:00.000"^^xsd:time ;
     schema:performer aksw:SoerenAuer, dw:FelixEngel, <#programm-authors-18> ;
     schema:startTime "15:30:00.000"^^xsd:time ;
-    a schema:Event .
+    a schema:Event, dw:InvitedPaper .
 
 <#programm-talk-19>
     dct:title "Collaborative and cross-stakeholder ontology engineering"@de, "Collaborative and cross-stakeholder ontology engineering"@en ;
     schema:endTime "23:15:00.000"^^xsd:time ;
     schema:performer aksw:SoerenAuer, dw:FawadKhan, dw:FelixEngel, dw:NenadKrdzavac, <#programm-authors-19> ;
     schema:startTime "23:00:00.000"^^xsd:time ;
-    a schema:Event .
+    a schema:Event, dw:ShortPaper .
 
 <#programm-talk-2>
     dct:title "Overview of Data-Driven Hazard-Detection Technology Research at WSU’s Disaster Resilience Analytics Center for Enhancing Community Resilience"@de, "Overview of Data-Driven Hazard-Detection Technology Research at WSU’s Disaster Resilience Analytics Center for Enhancing Community Resilience"@en ;
     schema:endTime "09:55:00.000"^^xsd:time ;
     schema:performer dw:AtriDutta, <#programm-authors-2> ;
     schema:startTime "09:35:00.000"^^xsd:time ;
-    a schema:Event .
-
-<#programm-talk-25>
-    schema:performer <#programm-authors-25> ;
-    a schema:Event .
-
-<#programm-talk-26>
-    schema:performer <#programm-authors-26> ;
-    a schema:Event .
-
-<#programm-talk-27>
-    dct:title "paper"@en ;
-    schema:performer <#programm-authors-27> ;
-    a schema:Event .
-
-<#programm-talk-28>
-    dct:title "20 min slots"@en ;
-    schema:performer <#programm-authors-28> ;
-    a schema:Event .
-
-<#programm-talk-29>
-    schema:performer <#programm-authors-29> ;
-    a schema:Event .
+    a schema:Event, dw:ShortPaper .
 
 <#programm-talk-3>
     dct:title "The Coypu Platform Data Integration Workflow"@de, "The Coypu Platform Data Integration Workflow"@en ;
     schema:endTime "10:10:00.000"^^xsd:time ;
     schema:performer aksw:NatanaelArndt, <#programm-authors-3> ;
     schema:startTime "09:55:00.000"^^xsd:time ;
-    a schema:Event .
+    a schema:Event, dw:Abstract .
 
 <#programm-talk-4>
     dct:title "Semantification of Geospatial Information for Enriched Knowledge Representation in Context of Crisis Informatics"@de, "Semantification of Geospatial Information for Enriched Knowledge Representation in Context of Crisis Informatics"@en ;
@@ -799,14 +757,14 @@ We invite contributions of novel results and ongoing work as well as position pa
     schema:endTime "11:45:00.000"^^xsd:time ;
     schema:performer dw:AlexanderWillner, dw:RichardFigura, <#programm-authors-8> ;
     schema:startTime "11:35:00.000"^^xsd:time ;
-    a schema:Event .
+    a schema:Event, dw:Abstract .
 
 <#programm-talk-9>
     dct:title "FAIR – A project to make weather information more usable"@de, "FAIR – A project to make weather information more usable"@en ;
     schema:endTime "12:00:00.000"^^xsd:time ;
     schema:performer dw:AlexanderWillner, dw:RichardFigura, <#programm-authors-9> ;
     schema:startTime "11:45:00.000"^^xsd:time ;
-    a schema:Event .
+    a schema:Event, dw:Abstract .
 
 <../lswt2022/>
     dct:date "2022-07-05"^^xsd:date ;
@@ -889,10 +847,18 @@ Martin-Luther-Ring 4 - 6<br/>
     foaf:homepage <https://iakleipzig.de/> .
 
 <https://infai.org/>
+    schema:location <https://infai.org/#address> ;
     a schema:Organization, foaf:Document, foaf:Organization ;
     rdfs:label "Institut für Angewandte Informatik e.V."@de, "Institute for Applied Informatics"@en ;
     foaf:homepage <https://infai.org/> ;
     foaf:logo "/images/partner/InfAI_small.svg" .
+
+<https://infai.org/#address>
+    schema:addressCountry "Germany" ;
+    schema:addressLocality "Leipzig" ;
+    schema:postalCode "04109" ;
+    schema:streetAddress "Goerdelerring 9" ;
+    a schema:PostalAddress .
 
 <https://siemens.com/>
     a foaf:Document, foaf:Organization ;
@@ -932,10 +898,18 @@ Martin-Luther-Ring 4 - 6<br/>
     a foaf:Document .
 
 <https://www.eccenca.com/>
+    schema:location <https://www.eccenca.com/#address> ;
     a schema:Organization, foaf:Document, foaf:Organization ;
     rdfs:label "eccenca GmbH", "eccenca GmbH"@de, "eccenca GmbH"@en ;
     foaf:homepage <https://www.eccenca.com/> ;
     foaf:logo dw:LogoEccenca .
+
+<https://www.eccenca.com/#address>
+    schema:addressCountry "Germany" ;
+    schema:addressLocality "Leipzig" ;
+    schema:postalCode "04109" ;
+    schema:streetAddress " Hainstraße 8" ;
+    a schema:PostalAddress .
 
 <https://www.inf.uni-hamburg.de/en/inst/ab/sems/people/angelie-kraft.html>
     a foaf:Document .

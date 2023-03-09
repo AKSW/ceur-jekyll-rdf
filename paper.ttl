@@ -255,7 +255,7 @@
     <http://xmlns.com/foaf/0.1/name> "Zelalem Demissie" .
 
 <>
-    <http://schema.org/subEvent> <#programm-session-1>, <#programm-session-2>, <#programm-session-3>, <#programm-session-4>, <#programm-session-5>, <#programm-talk-10>, <#programm-talk-15>, <#programm-talk-25>, <#programm-talk-26>, <#programm-talk-29>, <#programm-talk-5> ;
+    <http://schema.org/subEvent> <#programm-session-1>, <#programm-session-2>, <#programm-session-3>, <#programm-session-4>, <#programm-session-5>, <#programm-talk-10>, <#programm-talk-15>, <#programm-talk-5> ;
     a <https://vocab.eccenca.com/di/Dataset> .
 
 <#programm-authors-1>
@@ -343,21 +343,6 @@
 <#programm-authors-24>
     a <http://www.w3.org/2000/01/rdf-schema#Class> .
 
-<#programm-authors-25>
-    a <http://www.w3.org/2000/01/rdf-schema#Class> .
-
-<#programm-authors-26>
-    a <http://www.w3.org/2000/01/rdf-schema#Class> .
-
-<#programm-authors-27>
-    a <http://www.w3.org/2000/01/rdf-schema#Class> .
-
-<#programm-authors-28>
-    a <http://www.w3.org/2000/01/rdf-schema#Class> .
-
-<#programm-authors-29>
-    a <http://www.w3.org/2000/01/rdf-schema#Class> .
-
 <#programm-authors-3>
     rdf:_1 <http://aksw.org/NatanaelArndt> ;
     a <http://www.w3.org/2000/01/rdf-schema#Class> .
@@ -403,12 +388,6 @@
     <http://schema.org/startTime> "09:15:00.000"^^<http://www.w3.org/2001/XMLSchema#time> ;
     <http://schema.org/subEvent> <#programm-talk-1>, <#programm-talk-2>, <#programm-talk-3>, <#programm-talk-4> ;
     a <http://schema.org/Event> .
-
-<#programm-session-12>
-    <http://schema.org/subEvent> <#programm-talk-28> .
-
-<#programm-session-16>
-    <http://schema.org/subEvent> <#programm-talk-27> .
 
 <#programm-session-2>
     <http://purl.org/dc/terms/title> "Session II"@de, "Session II"@en ;
@@ -470,10 +449,11 @@
 
 <#programm-talk-12>
     <http://purl.org/dc/terms/title> "Resilienzfaktoren von Wertschöpfungsketten in der Agrar- und Ernährungsbranche am Beispiel der Pflanzenölproduktion"@de, "Resilienzfaktoren von Wertschöpfungsketten in der Agrar- und Ernährungsbranche am Beispiel der Pflanzenölproduktion"@en ;
+    <http://schema.org/availableLanguage> <http://lexvo.org/id/iso639-3/deu> ;
     <http://schema.org/endTime> "13:35:00.000"^^<http://www.w3.org/2001/XMLSchema#time> ;
     <http://schema.org/performer> <../#JohannLoempcke>, <../#MartinSchneider>, <#programm-authors-12> ;
     <http://schema.org/startTime> "13:20:00.000"^^<http://www.w3.org/2001/XMLSchema#time> ;
-    a <http://schema.org/Event> .
+    a <http://schema.org/Event>, <../#InvitedPaper> .
 
 <#programm-talk-13>
     <http://purl.org/dc/terms/title> "Multispectral Deep Learning Models for Wildfire Detection"@de, "Multispectral Deep Learning Models for Wildfire Detection"@en ;
@@ -510,57 +490,35 @@
     <http://schema.org/endTime> "15:30:00.000"^^<http://www.w3.org/2001/XMLSchema#time> ;
     <http://schema.org/performer> <http://aksw.org/MichaelMartin>, <../#AgnesMasipGomez>, <../#AlbertEckert>, <../#MartinHess>, <../#PhilippUlrich>, <../#TheodorIsinger>, <../#YushanLiu>, <#programm-authors-17> ;
     <http://schema.org/startTime> "15:15:00.000"^^<http://www.w3.org/2001/XMLSchema#time> ;
-    a <http://schema.org/Event> .
+    a <http://schema.org/Event>, <../#InvitedPaper> .
 
 <#programm-talk-18>
     <http://purl.org/dc/terms/title> "Challenges in the Creation and Uptake of Ontologies"@de, "Challenges in the Creation and Uptake of Ontologies"@en ;
     <http://schema.org/endTime> "15:45:00.000"^^<http://www.w3.org/2001/XMLSchema#time> ;
     <http://schema.org/performer> <http://aksw.org/SoerenAuer>, <../#FelixEngel>, <#programm-authors-18> ;
     <http://schema.org/startTime> "15:30:00.000"^^<http://www.w3.org/2001/XMLSchema#time> ;
-    a <http://schema.org/Event> .
+    a <http://schema.org/Event>, <../#InvitedPaper> .
 
 <#programm-talk-19>
     <http://purl.org/dc/terms/title> "Collaborative and cross-stakeholder ontology engineering"@de, "Collaborative and cross-stakeholder ontology engineering"@en ;
     <http://schema.org/endTime> "23:15:00.000"^^<http://www.w3.org/2001/XMLSchema#time> ;
     <http://schema.org/performer> <http://aksw.org/SoerenAuer>, <../#FawadKhan>, <../#FelixEngel>, <../#NenadKrdzavac>, <#programm-authors-19> ;
     <http://schema.org/startTime> "23:00:00.000"^^<http://www.w3.org/2001/XMLSchema#time> ;
-    a <http://schema.org/Event> .
+    a <http://schema.org/Event>, <../#ShortPaper> .
 
 <#programm-talk-2>
     <http://purl.org/dc/terms/title> "Overview of Data-Driven Hazard-Detection Technology Research at WSU’s Disaster Resilience Analytics Center for Enhancing Community Resilience"@de, "Overview of Data-Driven Hazard-Detection Technology Research at WSU’s Disaster Resilience Analytics Center for Enhancing Community Resilience"@en ;
     <http://schema.org/endTime> "09:55:00.000"^^<http://www.w3.org/2001/XMLSchema#time> ;
     <http://schema.org/performer> <../#AtriDutta>, <#programm-authors-2> ;
     <http://schema.org/startTime> "09:35:00.000"^^<http://www.w3.org/2001/XMLSchema#time> ;
-    a <http://schema.org/Event> .
-
-<#programm-talk-25>
-    <http://schema.org/performer> <#programm-authors-25> ;
-    a <http://schema.org/Event> .
-
-<#programm-talk-26>
-    <http://schema.org/performer> <#programm-authors-26> ;
-    a <http://schema.org/Event> .
-
-<#programm-talk-27>
-    <http://purl.org/dc/terms/title> "paper"@en ;
-    <http://schema.org/performer> <#programm-authors-27> ;
-    a <http://schema.org/Event> .
-
-<#programm-talk-28>
-    <http://purl.org/dc/terms/title> "20 min slots"@en ;
-    <http://schema.org/performer> <#programm-authors-28> ;
-    a <http://schema.org/Event> .
-
-<#programm-talk-29>
-    <http://schema.org/performer> <#programm-authors-29> ;
-    a <http://schema.org/Event> .
+    a <http://schema.org/Event>, <../#ShortPaper> .
 
 <#programm-talk-3>
     <http://purl.org/dc/terms/title> "The Coypu Platform Data Integration Workflow"@de, "The Coypu Platform Data Integration Workflow"@en ;
     <http://schema.org/endTime> "10:10:00.000"^^<http://www.w3.org/2001/XMLSchema#time> ;
     <http://schema.org/performer> <http://aksw.org/NatanaelArndt>, <#programm-authors-3> ;
     <http://schema.org/startTime> "09:55:00.000"^^<http://www.w3.org/2001/XMLSchema#time> ;
-    a <http://schema.org/Event> .
+    a <http://schema.org/Event>, <../#Abstract> .
 
 <#programm-talk-4>
     <http://purl.org/dc/terms/title> "Semantification of Geospatial Information for Enriched Knowledge Representation in Context of Crisis Informatics"@de, "Semantification of Geospatial Information for Enriched Knowledge Representation in Context of Crisis Informatics"@en ;
@@ -597,14 +555,14 @@
     <http://schema.org/endTime> "11:45:00.000"^^<http://www.w3.org/2001/XMLSchema#time> ;
     <http://schema.org/performer> <../#AlexanderWillner>, <../#RichardFigura>, <#programm-authors-8> ;
     <http://schema.org/startTime> "11:35:00.000"^^<http://www.w3.org/2001/XMLSchema#time> ;
-    a <http://schema.org/Event> .
+    a <http://schema.org/Event>, <../#Abstract> .
 
 <#programm-talk-9>
     <http://purl.org/dc/terms/title> "FAIR – A project to make weather information more usable"@de, "FAIR – A project to make weather information more usable"@en ;
     <http://schema.org/endTime> "12:00:00.000"^^<http://www.w3.org/2001/XMLSchema#time> ;
     <http://schema.org/performer> <../#AlexanderWillner>, <../#RichardFigura>, <#programm-authors-9> ;
     <http://schema.org/startTime> "11:45:00.000"^^<http://www.w3.org/2001/XMLSchema#time> ;
-    a <http://schema.org/Event> .
+    a <http://schema.org/Event>, <../#Abstract> .
 
 <../venue#LivingLab>
     <http://purl.org/dc/terms/description> """ScaDS.AI  Büro Leipzig<br/>
