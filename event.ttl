@@ -75,12 +75,14 @@ We invite contributions of novel results and ongoing work as well as position pa
     schema:logo <https://dataweek.de/d2r2-22/logo.png> ;
     schema:organizer <https://dataweek.de/d2r2-22/#Team> ;
     schema:recordedIn <https://www.youtube.com/watch?v=NA5-XYX5Kbo> ;
+    foaf:homepage <https://dataweek.de/d2r2-22/> ;
     vivo:hasProceedings <https://dataweek.de/d2r2-22/#proceedings> ;
     ceur:acronym "D2R2" ;
-    ceur:submittedpapers 1 ;
-    ceur:acceptedpapers 1 ;
-    ceur:acceptedregularpapers 1 ;
-    ceur:acceptedshortpapers 1 ;
+    ceur:submittedpapers 16 ;
+    ceur:acceptedpapers 8 ;
+    ceur:acceptedregularpapers 6 ;
+    ceur:acceptedshortpapers 2 ;
+    ceur:invitedpapers 3 ;
     a schema:Event, foaf:Document, bibo:Conference ;
     rdfs:label "International Workshop on Data-driven Resilience Research 2022"@de, "International Workshop on Data-driven Resilience Research 2022"@en ;
     dw:pc <https://dataweek.de/d2r2-22/#PC> .
