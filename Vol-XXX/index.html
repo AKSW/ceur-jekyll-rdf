@@ -54,6 +54,7 @@ CEURACCEPTEDSHORTPAPERS: the number of short accepted peer-reviewed papers  (opt
 {%- unless label_postfix == YYYY -%}
 {%- assign label = label | append: YYYY -%}
 {%- endunless -%}
+{%- assign homepage = workshop | rdf_property: "foaf:homepage" -%}
 {%- assign CEURLANG = proceedings | rdf_property: "dct:language" | rdf_property: "lvont:iso6392TCode" -%}
 {%- assign CEURPUBYEAR = JJJJ -%}
 {%- assign CEURWSYEAR = YYYY -%}
@@ -198,7 +199,7 @@ Creative Commons License Attribution 4.0 International
 
 <br><br><br>
 
-<h1><a href="http://www.workshop-website.org/loc"><span class="CEURVOLACRONYM">{{NNNN}} {{YYYY}}</span></a><br>
+<h1><a href="{{homepage}}"><span class="CEURVOLACRONYM">{{NNNN}} {{YYYY}}</span></a><br>
 <span class="CEURVOLTITLE">{{CEURVOLTITLE}}</span></h1>
 <br>
 
