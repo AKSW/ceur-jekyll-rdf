@@ -26,6 +26,11 @@ tasks:
     cmds:
       - docker run -it --rm -v {{.WORKING_DIRECTORY}}/_site:/workspace ghcr.io/validator/validator:latest vnu-runtime-image/bin/vnu /workspace/Vol-XXX/index.html
 
+  tidy:
+    desc: Tidy the HTML output with html tidy (https://github.com/htacg/tidy-html5/)
+    cmds:
+      - tidy -m -i -w 0 --output-encoding ascii _site/Vol-XXX/index.html
+
   build:
     desc: Build the site locally
     cmds:
