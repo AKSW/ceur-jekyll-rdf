@@ -143,6 +143,11 @@
     <http://xmlns.com/foaf/0.1/name> "Atri Dutta" ;
     <http://xmlns.com/foaf/0.1/title> "Prof. Dr." .
 
+<../#ChristopherFrank>
+    <http://schema.org/affiliation> <https://www.ciss.de/> ;
+    a <http://schema.org/Person>, <http://xmlns.com/foaf/0.1/Person> ;
+    <http://xmlns.com/foaf/0.1/name> "Christopher Frank" .
+
 <../#EvaHoerster>
     <http://schema.org/affiliation> <https://www.datev.de/> ;
     a <http://schema.org/Person>, <http://xmlns.com/foaf/0.1/Person> ;
@@ -180,6 +185,10 @@
     a <http://schema.org/Person>, <http://xmlns.com/foaf/0.1/Person> ;
     <http://xmlns.com/foaf/0.1/name> "Johann Lömpcke" .
 
+<../#MareikePetersen>
+    a <http://schema.org/Person>, <http://xmlns.com/foaf/0.1/Person> ;
+    <http://xmlns.com/foaf/0.1/name> "Mareike Petersen" .
+
 <../#MartinHess>
     <http://schema.org/affiliation> <https://www.infineon.com/> ;
     a <http://schema.org/Person>, <http://xmlns.com/foaf/0.1/Person> ;
@@ -212,6 +221,10 @@
     a <http://schema.org/Person>, <http://xmlns.com/foaf/0.1/Person> ;
     <http://xmlns.com/foaf/0.1/name> "Saideshwar Kota" .
 
+<../#SakyiMannah>
+    a <http://schema.org/Person>, <http://xmlns.com/foaf/0.1/Person> ;
+    <http://xmlns.com/foaf/0.1/name> "Sakyi Mannah" .
+
 <../#SelinaMudrack>
     <http://schema.org/affiliation> <https://sriw.de/> ;
     a <http://schema.org/Person>, <http://xmlns.com/foaf/0.1/Person> ;
@@ -227,6 +240,10 @@
     <http://schema.org/affiliation> <https://www.wichita.edu/> ;
     a <http://schema.org/Person>, <http://xmlns.com/foaf/0.1/Person> ;
     <http://xmlns.com/foaf/0.1/name> "Smitha Haridasan" .
+
+<../#StavroulaChatzipanagioti>
+    a <http://schema.org/Person>, <http://xmlns.com/foaf/0.1/Person> ;
+    <http://xmlns.com/foaf/0.1/name> "Stavroula Chatzipanagioti" .
 
 <../#TheodorIsinger>
     <http://schema.org/affiliation> <https://siemens.com/> ;
@@ -255,7 +272,7 @@
     <http://xmlns.com/foaf/0.1/name> "Zelalem Demissie" .
 
 <>
-    <http://schema.org/subEvent> <#programm-session-1>, <#programm-session-2>, <#programm-session-3>, <#programm-session-4>, <#programm-session-5>, <#programm-talk-10>, <#programm-talk-15>, <#programm-talk-5> ;
+    <http://schema.org/subEvent> <#programm-session-1>, <#programm-session-2>, <#programm-session-3>, <#programm-session-4>, <#programm-session-5> ;
     a <https://vocab.eccenca.com/di/Dataset> .
 
 <#programm-authors-1>
@@ -264,25 +281,18 @@
     a <http://www.w3.org/2000/01/rdf-schema#Class> .
 
 <#programm-authors-10>
-    a <http://www.w3.org/2000/01/rdf-schema#Class> .
-
-<#programm-authors-11>
-    rdf:_1 <../#EvaHoerster> ;
-    a <http://www.w3.org/2000/01/rdf-schema#Class> .
-
-<#programm-authors-12>
     rdf:_1 <../#JohannLoempcke> ;
     rdf:_2 <../#MartinSchneider> ;
     a <http://www.w3.org/2000/01/rdf-schema#Class> .
 
-<#programm-authors-13>
+<#programm-authors-11>
     rdf:_1 <../#SmithaHaridasan> ;
     rdf:_2 <../#AjitaRattani> ;
     rdf:_3 <../#ZelalemDemissie> ;
     rdf:_4 <../#AtriDutta> ;
     a <http://www.w3.org/2000/01/rdf-schema#Class> .
 
-<#programm-authors-14>
+<#programm-authors-12>
     rdf:_1 <../#SaideshwarKota> ;
     rdf:_2 <../#SmithaHaridasan> ;
     rdf:_3 <../#AjitaRattani> ;
@@ -291,14 +301,11 @@
     rdf:_6 <../#AtriDutta> ;
     a <http://www.w3.org/2000/01/rdf-schema#Class> .
 
-<#programm-authors-15>
-    a <http://www.w3.org/2000/01/rdf-schema#Class> .
-
-<#programm-authors-16>
+<#programm-authors-13>
     rdf:_1 <../#HansGertGraebe> ;
     a <http://www.w3.org/2000/01/rdf-schema#Class> .
 
-<#programm-authors-17>
+<#programm-authors-14>
     rdf:_1 <../#AgnesMasipGomez> ;
     rdf:_2 <../#MartinHess> ;
     rdf:_3 <../#PhilippUlrich> ;
@@ -308,16 +315,28 @@
     rdf:_7 <http://aksw.org/MichaelMartin> ;
     a <http://www.w3.org/2000/01/rdf-schema#Class> .
 
-<#programm-authors-18>
+<#programm-authors-15>
     rdf:_1 <../#FelixEngel> ;
     rdf:_2 <http://aksw.org/SoerenAuer> ;
     a <http://www.w3.org/2000/01/rdf-schema#Class> .
 
-<#programm-authors-19>
+<#programm-authors-16>
     rdf:_1 <../#FawadKhan> ;
     rdf:_2 <../#FelixEngel> ;
     rdf:_3 <../#NenadKrdzavac> ;
     rdf:_4 <http://aksw.org/SoerenAuer> ;
+    a <http://www.w3.org/2000/01/rdf-schema#Class> .
+
+<#programm-authors-17>
+    rdf:_1 <http://aksw.org/SebastianTramp> ;
+    a <http://www.w3.org/2000/01/rdf-schema#Class> .
+
+<#programm-authors-18>
+    rdf:_1 <http://aksw.org/SabineGruenderFahrer> ;
+    a <http://www.w3.org/2000/01/rdf-schema#Class> .
+
+<#programm-authors-19>
+    rdf:_1 <http://aksw.org/AntoninDelpeuch> ;
     a <http://www.w3.org/2000/01/rdf-schema#Class> .
 
 <#programm-authors-2>
@@ -325,26 +344,15 @@
     a <http://www.w3.org/2000/01/rdf-schema#Class> .
 
 <#programm-authors-20>
-    rdf:_1 <http://aksw.org/SebastianTramp> ;
-    a <http://www.w3.org/2000/01/rdf-schema#Class> .
-
-<#programm-authors-21>
-    rdf:_1 <http://aksw.org/SabineGruenderFahrer> ;
-    a <http://www.w3.org/2000/01/rdf-schema#Class> .
-
-<#programm-authors-22>
-    rdf:_1 <http://aksw.org/AntoninDelpeuch> ;
-    a <http://www.w3.org/2000/01/rdf-schema#Class> .
-
-<#programm-authors-23>
     rdf:_1 <http://aksw.org/RoyMeissner> ;
     a <http://www.w3.org/2000/01/rdf-schema#Class> .
 
-<#programm-authors-24>
+<#programm-authors-21>
     a <http://www.w3.org/2000/01/rdf-schema#Class> .
 
 <#programm-authors-3>
     rdf:_1 <http://aksw.org/NatanaelArndt> ;
+    rdf:_2 <http://aksw.org/SebastianTramp> ;
     a <http://www.w3.org/2000/01/rdf-schema#Class> .
 
 <#programm-authors-4>
@@ -358,211 +366,224 @@
     a <http://www.w3.org/2000/01/rdf-schema#Class> .
 
 <#programm-authors-5>
-    a <http://www.w3.org/2000/01/rdf-schema#Class> .
-
-<#programm-authors-6>
     rdf:_1 <../#TomRichardVargis> ;
     rdf:_2 <../#SiavashGhiasvand> ;
     a <http://www.w3.org/2000/01/rdf-schema#Class> .
 
-<#programm-authors-7>
-    rdf:_1 <../#SelinaMudrack> ;
+<#programm-authors-6>
+    rdf:_1 <../#StavroulaChatzipanagioti> ;
     rdf:_2 <../#TobiasGebel> ;
+    rdf:_3 <../#SakyiMannah> ;
+    rdf:_4 <../#SelinaMudrack> ;
+    rdf:_5 <../#MareikePetersen> ;
+    a <http://www.w3.org/2000/01/rdf-schema#Class> .
+
+<#programm-authors-7>
+    rdf:_1 <../#RichardFigura> ;
+    rdf:_2 <../#ChristopherFrank> ;
+    rdf:_3 <../#AlexanderWillner> ;
     a <http://www.w3.org/2000/01/rdf-schema#Class> .
 
 <#programm-authors-8>
-    rdf:_1 <../#AlexanderWillner> ;
-    rdf:_2 <../#RichardFigura> ;
+    rdf:_1 <../#RichardFigura> ;
+    rdf:_2 <../#ChristopherFrank> ;
+    rdf:_3 <../#AlexanderWillner> ;
     a <http://www.w3.org/2000/01/rdf-schema#Class> .
 
 <#programm-authors-9>
-    rdf:_1 <../#AlexanderWillner> ;
-    rdf:_2 <../#RichardFigura> ;
+    rdf:_1 <../#EvaHoerster> ;
     a <http://www.w3.org/2000/01/rdf-schema#Class> .
 
 <#programm-session-1>
     <http://purl.org/dc/terms/title> "Session I"@de, "Session I"@en ;
     <http://schema.org/endTime> "10:30:00.000"^^<http://www.w3.org/2001/XMLSchema#time> ;
     <http://schema.org/location> <../venue#Sitzungssaal> ;
-    <http://schema.org/performer> <http://aksw.org/SebastianTramp>, <#programm-authors-20> ;
+    <http://schema.org/performer> <http://aksw.org/SebastianTramp>, <#programm-authors-17> ;
     <http://schema.org/startTime> "09:15:00.000"^^<http://www.w3.org/2001/XMLSchema#time> ;
     <http://schema.org/subEvent> <#programm-talk-1>, <#programm-talk-2>, <#programm-talk-3>, <#programm-talk-4> ;
-    a <http://schema.org/Event> .
+    a <http://schema.org/Event> ;
+    <../#exclude> true .
 
 <#programm-session-2>
     <http://purl.org/dc/terms/title> "Session II"@de, "Session II"@en ;
     <http://schema.org/endTime> "12:00:00.000"^^<http://www.w3.org/2001/XMLSchema#time> ;
     <http://schema.org/location> <../venue#Sitzungssaal> ;
-    <http://schema.org/performer> <http://aksw.org/SabineGruenderFahrer>, <#programm-authors-21> ;
+    <http://schema.org/performer> <http://aksw.org/SabineGruenderFahrer>, <#programm-authors-18> ;
     <http://schema.org/startTime> "11:00:00.000"^^<http://www.w3.org/2001/XMLSchema#time> ;
-    <http://schema.org/subEvent> <#programm-talk-6>, <#programm-talk-7>, <#programm-talk-8>, <#programm-talk-9> ;
-    a <http://schema.org/Event> .
+    <http://schema.org/subEvent> <#programm-talk-5>, <#programm-talk-6>, <#programm-talk-7>, <#programm-talk-8> ;
+    a <http://schema.org/Event> ;
+    <../#exclude> true .
 
 <#programm-session-3>
     <http://purl.org/dc/terms/title> "Session III"@de, "Session III"@en ;
     <http://schema.org/endTime> "14:30:00.000"^^<http://www.w3.org/2001/XMLSchema#time> ;
     <http://schema.org/location> <../venue#Sitzungssaal> ;
-    <http://schema.org/performer> <http://aksw.org/AntoninDelpeuch>, <#programm-authors-22> ;
+    <http://schema.org/performer> <http://aksw.org/AntoninDelpeuch>, <#programm-authors-19> ;
     <http://schema.org/startTime> "13:00:00.000"^^<http://www.w3.org/2001/XMLSchema#time> ;
-    <http://schema.org/subEvent> <#programm-talk-11>, <#programm-talk-12>, <#programm-talk-13>, <#programm-talk-14> ;
-    a <http://schema.org/Event> .
+    <http://schema.org/subEvent> <#programm-talk-10>, <#programm-talk-11>, <#programm-talk-12>, <#programm-talk-9> ;
+    a <http://schema.org/Event> ;
+    <../#exclude> true .
 
 <#programm-session-4>
     <http://purl.org/dc/terms/title> "Session IV"@de, "Session IV"@en ;
     <http://schema.org/endTime> "15:45:00.000"^^<http://www.w3.org/2001/XMLSchema#time> ;
     <http://schema.org/location> <../venue#Sitzungssaal> ;
-    <http://schema.org/performer> <http://aksw.org/RoyMeissner>, <#programm-authors-23> ;
+    <http://schema.org/performer> <http://aksw.org/RoyMeissner>, <#programm-authors-20> ;
     <http://schema.org/startTime> "15:00:00.000"^^<http://www.w3.org/2001/XMLSchema#time> ;
-    <http://schema.org/subEvent> <#programm-talk-16>, <#programm-talk-17>, <#programm-talk-18> ;
-    a <http://schema.org/Event> .
+    <http://schema.org/subEvent> <#programm-talk-13>, <#programm-talk-14>, <#programm-talk-15> ;
+    a <http://schema.org/Event> ;
+    <../#exclude> true .
 
 <#programm-session-5>
     <http://purl.org/dc/terms/title> "Invited Contribution from the LSWT2023"@en ;
     <http://schema.org/endTime> "23:15:00.000"^^<http://www.w3.org/2001/XMLSchema#time> ;
-    <http://schema.org/performer> <#programm-authors-24> ;
+    <http://schema.org/performer> <#programm-authors-21> ;
     <http://schema.org/startTime> "23:00:00.000"^^<http://www.w3.org/2001/XMLSchema#time> ;
-    <http://schema.org/subEvent> <#programm-talk-19> ;
-    a <http://schema.org/Event> .
+    <http://schema.org/subEvent> <#programm-talk-16> ;
+    a <http://schema.org/Event> ;
+    <../#exclude> true .
 
 <#programm-talk-1>
-    <http://purl.org/dc/terms/title> "The Ethical Risks of Analyzing Crisis Events on Social Media with Machine Learning"@de, "The Ethical Risks of Analyzing Crisis Events on Social Media with Machine Learning"@en ;
+    <http://purl.org/dc/terms/identifier> "paper01" ;
+    <http://purl.org/dc/terms/title> "The Ethical Risks of Analyzing Crisis Events on Social Media with Machine Learning"@en ;
     <http://schema.org/endTime> "09:35:00.000"^^<http://www.w3.org/2001/XMLSchema#time> ;
     <http://schema.org/performer> <http://aksw.org/RicardoUsbeck>, <../#AngelieKraft>, <#programm-authors-1> ;
     <http://schema.org/startTime> "09:15:00.000"^^<http://www.w3.org/2001/XMLSchema#time> ;
-    a <http://schema.org/Event> .
+    a <http://schema.org/Event> ;
+    <../#exclude> false .
 
 <#programm-talk-10>
-    <http://ns.ontowiki.net/SysOnt/Site/track> <../#pause> ;
-    <http://purl.org/dc/terms/title> "Lunch Break"@en, "Mittagessen"@de ;
-    <http://schema.org/endTime> "13:00:00.000"^^<http://www.w3.org/2001/XMLSchema#time> ;
-    <http://schema.org/location> <../venue#Wandelhalle> ;
-    <http://schema.org/performer> <#programm-authors-10> ;
-    <http://schema.org/startTime> "12:00:00.000"^^<http://www.w3.org/2001/XMLSchema#time> ;
-    a <http://schema.org/Event> .
-
-<#programm-talk-11>
-    <http://purl.org/dc/terms/title> "Früherkennung möglicher Versorgungsstörungen durch die Analyse tiefer Lieferketten (Deep Supply Chains)"@de, "Früherkennung möglicher Versorgungsstörungen durch die Analyse tiefer Lieferketten (Deep Supply Chains)"@en ;
-    <http://schema.org/endTime> "13:20:00.000"^^<http://www.w3.org/2001/XMLSchema#time> ;
-    <http://schema.org/performer> <../#EvaHoerster>, <#programm-authors-11> ;
-    <http://schema.org/startTime> "13:00:00.000"^^<http://www.w3.org/2001/XMLSchema#time> ;
-    a <http://schema.org/Event> .
-
-<#programm-talk-12>
-    <http://purl.org/dc/terms/title> "Resilienzfaktoren von Wertschöpfungsketten in der Agrar- und Ernährungsbranche am Beispiel der Pflanzenölproduktion"@de, "Resilienzfaktoren von Wertschöpfungsketten in der Agrar- und Ernährungsbranche am Beispiel der Pflanzenölproduktion"@en ;
+    <http://purl.org/dc/terms/identifier> "paper05" ;
+    <http://purl.org/dc/terms/title> "Resilience Factors of Value Chains in the Agri-Food Sector Using the Example of Vegetable Oil Production"@en, "Resilienzfaktoren von Wertschöpfungsketten in der Agrar- und Ernährungsbranche am Beispiel der Pflanzenölproduktion"@de ;
     <http://schema.org/availableLanguage> <http://lexvo.org/id/iso639-3/deu> ;
     <http://schema.org/endTime> "13:35:00.000"^^<http://www.w3.org/2001/XMLSchema#time> ;
-    <http://schema.org/performer> <../#JohannLoempcke>, <../#MartinSchneider>, <#programm-authors-12> ;
+    <http://schema.org/performer> <../#JohannLoempcke>, <../#MartinSchneider>, <#programm-authors-10> ;
     <http://schema.org/startTime> "13:20:00.000"^^<http://www.w3.org/2001/XMLSchema#time> ;
-    a <http://schema.org/Event>, <../#InvitedPaper> .
+    a <http://schema.org/Event>, <../#InvitedPaper> ;
+    <../#exclude> false .
+
+<#programm-talk-11>
+    <http://purl.org/dc/terms/identifier> "paper06" ;
+    <http://purl.org/dc/terms/title> "Multispectral Deep Learning Models for Wildfire Detection"@en ;
+    <http://schema.org/endTime> "13:50:00.000"^^<http://www.w3.org/2001/XMLSchema#time> ;
+    <http://schema.org/performer> <../#AjitaRattani>, <../#AtriDutta>, <../#SmithaHaridasan>, <../#ZelalemDemissie>, <#programm-authors-11> ;
+    <http://schema.org/startTime> "13:35:00.000"^^<http://www.w3.org/2001/XMLSchema#time> ;
+    a <http://schema.org/Event> ;
+    <../#exclude> false .
+
+<#programm-talk-12>
+    <http://purl.org/dc/terms/identifier> "paper07" ;
+    <http://purl.org/dc/terms/title> "Multimodal Combination of Text and Image Tweets for Disaster Response Assessment"@en ;
+    <http://schema.org/endTime> "14:05:00.000"^^<http://www.w3.org/2001/XMLSchema#time> ;
+    <http://schema.org/performer> <../#AaronBowen>, <../#AjitaRattani>, <../#AtriDutta>, <../#GlynRimmington>, <../#SaideshwarKota>, <../#SmithaHaridasan>, <#programm-authors-12> ;
+    <http://schema.org/startTime> "13:50:00.000"^^<http://www.w3.org/2001/XMLSchema#time> ;
+    a <http://schema.org/Event> ;
+    <../#exclude> false .
 
 <#programm-talk-13>
-    <http://purl.org/dc/terms/title> "Multispectral Deep Learning Models for Wildfire Detection"@de, "Multispectral Deep Learning Models for Wildfire Detection"@en ;
-    <http://schema.org/endTime> "13:50:00.000"^^<http://www.w3.org/2001/XMLSchema#time> ;
-    <http://schema.org/performer> <../#AjitaRattani>, <../#AtriDutta>, <../#SmithaHaridasan>, <../#ZelalemDemissie>, <#programm-authors-13> ;
-    <http://schema.org/startTime> "13:35:00.000"^^<http://www.w3.org/2001/XMLSchema#time> ;
-    a <http://schema.org/Event> .
+    <http://purl.org/dc/terms/identifier> "paper08" ;
+    <http://purl.org/dc/terms/title> "Semantic-Aware Metadata and Resilience of Socio-Cultural Ecosystems"@en ;
+    <http://schema.org/endTime> "15:15:00.000"^^<http://www.w3.org/2001/XMLSchema#time> ;
+    <http://schema.org/performer> <../#HansGertGraebe>, <#programm-authors-13> ;
+    <http://schema.org/startTime> "15:00:00.000"^^<http://www.w3.org/2001/XMLSchema#time> ;
+    a <http://schema.org/Event> ;
+    <../#exclude> false .
 
 <#programm-talk-14>
-    <http://purl.org/dc/terms/title> "Multimodal Combination of Text and Image Tweets for Disaster Response Assessment"@de, "Multimodal Combination of Text and Image Tweets for Disaster Response Assessment"@en ;
-    <http://schema.org/endTime> "14:05:00.000"^^<http://www.w3.org/2001/XMLSchema#time> ;
-    <http://schema.org/performer> <../#AaronBowen>, <../#AjitaRattani>, <../#AtriDutta>, <../#GlynRimmington>, <../#SaideshwarKota>, <../#SmithaHaridasan>, <#programm-authors-14> ;
-    <http://schema.org/startTime> "13:50:00.000"^^<http://www.w3.org/2001/XMLSchema#time> ;
-    a <http://schema.org/Event> .
+    <http://purl.org/dc/terms/identifier> "paper09" ;
+    <http://purl.org/dc/terms/title> "Challenges for Achieving Supply Chain Resilience and Transparency within CoyPu"@en ;
+    <http://schema.org/endTime> "15:30:00.000"^^<http://www.w3.org/2001/XMLSchema#time> ;
+    <http://schema.org/performer> <http://aksw.org/MichaelMartin>, <../#AgnesMasipGomez>, <../#AlbertEckert>, <../#MartinHess>, <../#PhilippUlrich>, <../#TheodorIsinger>, <../#YushanLiu>, <#programm-authors-14> ;
+    <http://schema.org/startTime> "15:15:00.000"^^<http://www.w3.org/2001/XMLSchema#time> ;
+    a <http://schema.org/Event>, <../#InvitedPaper> ;
+    <../#exclude> false .
 
 <#programm-talk-15>
-    <http://ns.ontowiki.net/SysOnt/Site/track> <../#pause> ;
-    <http://purl.org/dc/terms/title> "Coffee Break"@en, "Kaffee Pause"@de ;
-    <http://schema.org/endTime> "15:00:00.000"^^<http://www.w3.org/2001/XMLSchema#time> ;
-    <http://schema.org/location> <../venue#Wandelhalle> ;
-    <http://schema.org/performer> <#programm-authors-15> ;
-    <http://schema.org/startTime> "14:30:00.000"^^<http://www.w3.org/2001/XMLSchema#time> ;
-    a <http://schema.org/Event> .
+    <http://purl.org/dc/terms/identifier> "paper10" ;
+    <http://purl.org/dc/terms/title> "Collaborative Work on Ontologies - A Report"@en ;
+    <http://schema.org/endTime> "15:45:00.000"^^<http://www.w3.org/2001/XMLSchema#time> ;
+    <http://schema.org/performer> <http://aksw.org/SoerenAuer>, <../#FelixEngel>, <#programm-authors-15> ;
+    <http://schema.org/startTime> "15:30:00.000"^^<http://www.w3.org/2001/XMLSchema#time> ;
+    a <http://schema.org/Event>, <../#ShortPaper> ;
+    <../#exclude> false .
 
 <#programm-talk-16>
-    <http://purl.org/dc/terms/title> "Semantic-Aware Metadata and Resilience of Socio-Cultural Systems"@de, "Semantic-Aware Metadata and Resilience of Socio-Cultural Systems"@en ;
-    <http://schema.org/endTime> "15:15:00.000"^^<http://www.w3.org/2001/XMLSchema#time> ;
-    <http://schema.org/performer> <../#HansGertGraebe>, <#programm-authors-16> ;
-    <http://schema.org/startTime> "15:00:00.000"^^<http://www.w3.org/2001/XMLSchema#time> ;
-    a <http://schema.org/Event> .
-
-<#programm-talk-17>
-    <http://purl.org/dc/terms/title> "Challenges for Achieving Supply Chain Resilience and Transparency within CoyPu"@de, "Challenges for Achieving Supply Chain Resilience and Transparency within CoyPu"@en ;
-    <http://schema.org/endTime> "15:30:00.000"^^<http://www.w3.org/2001/XMLSchema#time> ;
-    <http://schema.org/performer> <http://aksw.org/MichaelMartin>, <../#AgnesMasipGomez>, <../#AlbertEckert>, <../#MartinHess>, <../#PhilippUlrich>, <../#TheodorIsinger>, <../#YushanLiu>, <#programm-authors-17> ;
-    <http://schema.org/startTime> "15:15:00.000"^^<http://www.w3.org/2001/XMLSchema#time> ;
-    a <http://schema.org/Event>, <../#InvitedPaper> .
-
-<#programm-talk-18>
-    <http://purl.org/dc/terms/title> "Challenges in the Creation and Uptake of Ontologies"@de, "Challenges in the Creation and Uptake of Ontologies"@en ;
-    <http://schema.org/endTime> "15:45:00.000"^^<http://www.w3.org/2001/XMLSchema#time> ;
-    <http://schema.org/performer> <http://aksw.org/SoerenAuer>, <../#FelixEngel>, <#programm-authors-18> ;
-    <http://schema.org/startTime> "15:30:00.000"^^<http://www.w3.org/2001/XMLSchema#time> ;
-    a <http://schema.org/Event>, <../#InvitedPaper> .
-
-<#programm-talk-19>
-    <http://purl.org/dc/terms/title> "Collaborative and cross-stakeholder ontology engineering"@de, "Collaborative and cross-stakeholder ontology engineering"@en ;
+    <http://purl.org/dc/terms/identifier> "paper11" ;
+    <http://purl.org/dc/terms/title> "Collaborative and Cross-Stakeholder Ontology Engineering"@en ;
     <http://schema.org/endTime> "23:15:00.000"^^<http://www.w3.org/2001/XMLSchema#time> ;
-    <http://schema.org/performer> <http://aksw.org/SoerenAuer>, <../#FawadKhan>, <../#FelixEngel>, <../#NenadKrdzavac>, <#programm-authors-19> ;
+    <http://schema.org/performer> <http://aksw.org/SoerenAuer>, <../#FawadKhan>, <../#FelixEngel>, <../#NenadKrdzavac>, <#programm-authors-16> ;
     <http://schema.org/startTime> "23:00:00.000"^^<http://www.w3.org/2001/XMLSchema#time> ;
-    a <http://schema.org/Event>, <../#ShortPaper> .
+    a <http://schema.org/Event>, <../#ShortPaper> ;
+    <../#exclude> false .
 
 <#programm-talk-2>
-    <http://purl.org/dc/terms/title> "Overview of Data-Driven Hazard-Detection Technology Research at WSU’s Disaster Resilience Analytics Center for Enhancing Community Resilience"@de, "Overview of Data-Driven Hazard-Detection Technology Research at WSU’s Disaster Resilience Analytics Center for Enhancing Community Resilience"@en ;
+    <http://purl.org/dc/terms/identifier> "paper02" ;
+    <http://purl.org/dc/terms/title> "Overview of Data-Driven Hazard-Detection Technology Research at WSU’s Disaster Resilience Analytics Center for Enhancing Community Resilience"@en ;
     <http://schema.org/endTime> "09:55:00.000"^^<http://www.w3.org/2001/XMLSchema#time> ;
     <http://schema.org/performer> <../#AtriDutta>, <#programm-authors-2> ;
     <http://schema.org/startTime> "09:35:00.000"^^<http://www.w3.org/2001/XMLSchema#time> ;
-    a <http://schema.org/Event>, <../#ShortPaper> .
+    a <http://schema.org/Event>, <../#ShortPaper> ;
+    <../#exclude> false .
 
 <#programm-talk-3>
-    <http://purl.org/dc/terms/title> "The Coypu Platform Data Integration Workflow"@de, "The Coypu Platform Data Integration Workflow"@en ;
+    <http://purl.org/dc/terms/title> "The Coypu Platform Data Integration Workflow"@en ;
     <http://schema.org/endTime> "10:10:00.000"^^<http://www.w3.org/2001/XMLSchema#time> ;
-    <http://schema.org/performer> <http://aksw.org/NatanaelArndt>, <#programm-authors-3> ;
+    <http://schema.org/performer> <http://aksw.org/NatanaelArndt>, <http://aksw.org/SebastianTramp>, <#programm-authors-3> ;
     <http://schema.org/startTime> "09:55:00.000"^^<http://www.w3.org/2001/XMLSchema#time> ;
-    a <http://schema.org/Event>, <../#Abstract> .
+    a <http://schema.org/Event> ;
+    <../#exclude> true .
 
 <#programm-talk-4>
-    <http://purl.org/dc/terms/title> "Semantification of Geospatial Information for Enriched Knowledge Representation in Context of Crisis Informatics"@de, "Semantification of Geospatial Information for Enriched Knowledge Representation in Context of Crisis Informatics"@en ;
+    <http://purl.org/dc/terms/identifier> "paper03" ;
+    <http://purl.org/dc/terms/title> "Semantification of Geospatial Information for Enriched Knowledge Representation in Context of Crisis Informatics"@en ;
     <http://schema.org/endTime> "10:30:00.000"^^<http://www.w3.org/2001/XMLSchema#time> ;
     <http://schema.org/performer> <http://aksw.org/ClausStadler>, <http://aksw.org/KurtJunghanns>, <http://aksw.org/LorenzBuehmann>, <http://aksw.org/MichaelMartin>, <http://aksw.org/NormanRadtke>, <http://aksw.org/SabineGruenderFahrer>, <http://aksw.org/SimonBin>, <#programm-authors-4> ;
     <http://schema.org/startTime> "10:10:00.000"^^<http://www.w3.org/2001/XMLSchema#time> ;
-    a <http://schema.org/Event> .
+    a <http://schema.org/Event> ;
+    <../#exclude> false .
 
 <#programm-talk-5>
-    <http://ns.ontowiki.net/SysOnt/Site/track> <../#pause> ;
-    <http://purl.org/dc/terms/title> "Coffee Break "@en, "Kaffee Pause"@de ;
-    <http://schema.org/endTime> "11:00:00.000"^^<http://www.w3.org/2001/XMLSchema#time> ;
-    <http://schema.org/location> <../venue#Wandelhalle> ;
-    <http://schema.org/performer> <#programm-authors-5> ;
-    <http://schema.org/startTime> "10:30:00.000"^^<http://www.w3.org/2001/XMLSchema#time> ;
-    a <http://schema.org/Event> .
+    <http://purl.org/dc/terms/identifier> "paper04" ;
+    <http://purl.org/dc/terms/title> "Assessing Anonymized System Logs Usefulness for Behavioral Analysis in RNN Models"@en ;
+    <http://schema.org/endTime> "11:20:00.000"^^<http://www.w3.org/2001/XMLSchema#time> ;
+    <http://schema.org/performer> <../#SiavashGhiasvand>, <../#TomRichardVargis>, <#programm-authors-5> ;
+    <http://schema.org/startTime> "11:00:00.000"^^<http://www.w3.org/2001/XMLSchema#time> ;
+    a <http://schema.org/Event> ;
+    <../#exclude> false .
 
 <#programm-talk-6>
-    <http://purl.org/dc/terms/title> "Assessing Anonymized System Logs Usefulness for Behavioral Analysis in RNN Models"@de, "Assessing Anonymized System Logs Usefulness for Behavioral Analysis in RNN Models"@en ;
-    <http://schema.org/endTime> "11:20:00.000"^^<http://www.w3.org/2001/XMLSchema#time> ;
-    <http://schema.org/performer> <../#SiavashGhiasvand>, <../#TomRichardVargis>, <#programm-authors-6> ;
-    <http://schema.org/startTime> "11:00:00.000"^^<http://www.w3.org/2001/XMLSchema#time> ;
-    a <http://schema.org/Event> .
+    <http://purl.org/dc/terms/title> "Der Krisenbegriff und dessen Implikation für Entwicklung von intelligenten Werkzeugen zur Krisenprävention und zum Krisenmanagement"@de, "The Concept of Crisis and Its Implication for Development of Intelligent Tools for Crisis Prevention and Management"@en ;
+    <http://schema.org/availableLanguage> <http://lexvo.org/id/iso639-3/deu> ;
+    <http://schema.org/endTime> "11:35:00.000"^^<http://www.w3.org/2001/XMLSchema#time> ;
+    <http://schema.org/performer> <../#MareikePetersen>, <../#SakyiMannah>, <../#SelinaMudrack>, <../#StavroulaChatzipanagioti>, <../#TobiasGebel>, <#programm-authors-6> ;
+    <http://schema.org/startTime> "11:20:00.000"^^<http://www.w3.org/2001/XMLSchema#time> ;
+    a <http://schema.org/Event> ;
+    <../#exclude> true .
 
 <#programm-talk-7>
-    <http://purl.org/dc/terms/title> "Der Krisenbegriff und dessen Implikation für Entwicklung von intelligenten Werkzeugen zur Krisenprävention und zum Krisenmanagement"@de, "Der Krisenbegriff und dessen Implikation für Entwicklung von intelligenten Werkzeugen zur Krisenprävention und zum Krisenmanagement"@en ;
-    <http://schema.org/endTime> "11:35:00.000"^^<http://www.w3.org/2001/XMLSchema#time> ;
-    <http://schema.org/performer> <../#SelinaMudrack>, <../#TobiasGebel>, <#programm-authors-7> ;
-    <http://schema.org/startTime> "11:20:00.000"^^<http://www.w3.org/2001/XMLSchema#time> ;
-    a <http://schema.org/Event> .
+    <http://purl.org/dc/terms/title> "A Lightweight Citizens Information Portal for Extreme Weather Events"@en ;
+    <http://schema.org/endTime> "11:45:00.000"^^<http://www.w3.org/2001/XMLSchema#time> ;
+    <http://schema.org/performer> <../#AlexanderWillner>, <../#ChristopherFrank>, <../#RichardFigura>, <#programm-authors-7> ;
+    <http://schema.org/startTime> "11:35:00.000"^^<http://www.w3.org/2001/XMLSchema#time> ;
+    a <http://schema.org/Event> ;
+    <../#exclude> true .
 
 <#programm-talk-8>
-    <http://purl.org/dc/terms/title> "A lightweight citizens information portal for extreme weather events"@de, "A lightweight citizens information portal for extreme weather events"@en ;
-    <http://schema.org/endTime> "11:45:00.000"^^<http://www.w3.org/2001/XMLSchema#time> ;
-    <http://schema.org/performer> <../#AlexanderWillner>, <../#RichardFigura>, <#programm-authors-8> ;
-    <http://schema.org/startTime> "11:35:00.000"^^<http://www.w3.org/2001/XMLSchema#time> ;
-    a <http://schema.org/Event>, <../#Abstract> .
+    <http://purl.org/dc/terms/title> "FAIR – A Project to Make Weather Information More Usable"@en ;
+    <http://schema.org/endTime> "12:00:00.000"^^<http://www.w3.org/2001/XMLSchema#time> ;
+    <http://schema.org/performer> <../#AlexanderWillner>, <../#ChristopherFrank>, <../#RichardFigura>, <#programm-authors-8> ;
+    <http://schema.org/startTime> "11:45:00.000"^^<http://www.w3.org/2001/XMLSchema#time> ;
+    a <http://schema.org/Event> ;
+    <../#exclude> true .
 
 <#programm-talk-9>
-    <http://purl.org/dc/terms/title> "FAIR – A project to make weather information more usable"@de, "FAIR – A project to make weather information more usable"@en ;
-    <http://schema.org/endTime> "12:00:00.000"^^<http://www.w3.org/2001/XMLSchema#time> ;
-    <http://schema.org/performer> <../#AlexanderWillner>, <../#RichardFigura>, <#programm-authors-9> ;
-    <http://schema.org/startTime> "11:45:00.000"^^<http://www.w3.org/2001/XMLSchema#time> ;
-    a <http://schema.org/Event>, <../#Abstract> .
+    <http://purl.org/dc/terms/title> "Early Detection of Potential Supply Disruptions Through the Analysis of Deep Supply Chains"@en, "Früherkennung möglicher Versorgungsstörungen durch die Analyse tiefer Lieferketten (Deep Supply Chains)"@de ;
+    <http://schema.org/availableLanguage> <http://lexvo.org/id/iso639-3/deu> ;
+    <http://schema.org/endTime> "13:20:00.000"^^<http://www.w3.org/2001/XMLSchema#time> ;
+    <http://schema.org/performer> <../#EvaHoerster>, <#programm-authors-9> ;
+    <http://schema.org/startTime> "13:00:00.000"^^<http://www.w3.org/2001/XMLSchema#time> ;
+    a <http://schema.org/Event> ;
+    <../#exclude> true .
 
 <../venue#LivingLab>
     <http://purl.org/dc/terms/description> """ScaDS.AI  Büro Leipzig<br/>
