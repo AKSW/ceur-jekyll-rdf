@@ -362,10 +362,21 @@ Further, {{invited_papers}} invited papers are included in the proceedings.
 
 <ul>
 {%- for paper in papers -%}
+{%- assign paper_id = paper.entity | rdf_property: "dct:identifier" -%}
+{%- assign exclude_res = paper.entity | sparql_query: "select ?exclude { ?resourceUri dw:exclude ?exclude_. bind(if(?exclude_, 'true', 'false') as ?exclude) }" -%}
+{%- if exclude_res.first.exclude == "true" -%}
+{%- assign exclude = true -%}
+{%- else -%}
+{%- assign exclude = false -%}
+{%- endif -%}
+{%- assign other_title = paper.entity | rdf_property: "dct:title", site.otherlanguage -%}
 {%- assign CEURTITLE = paper.entity | rdf_property: "dct:title", site.language -%}
 {%- unless CEURTITLE -%}
 {%- assign CEURTITLE = paper.entity | rdf_property: "dct:title" -%}
 {%- endunless -%}
+{%- if other_title -%}
+{%- assign CEURTITLE = other_title | append: " (" | append: CEURTITLE | append: ")" -%}
+{%- endif -%}
 {%- assign CEURPAGES = "" -%}
 {%- assign authors = paper.entity | rdf_container: "schema:performer" -%}
 {%- unless authors.first -%}
@@ -376,19 +387,22 @@ Further, {{invited_papers}} invited papers are included in the proceedings.
 {%- endunless -%}
 {%- assign track = "" -%}
 {%- assign language = "" -%}
-{% assign isKeynote = paper.entity | sparql_query: "select ?entity { ?entity rdf:type dw:Keynote . filter(?entity = ?resourceUri) }" %}
-{% assign isInvited = paper.entity | sparql_query: "select ?entity { ?entity rdf:type dw:InvitedPaper . filter(?entity = ?resourceUri) }" %}
-{% assign isShort = paper.entity | sparql_query: "select ?entity { ?entity rdf:type dw:ShortPaper . filter(?entity = ?resourceUri) }" %}
-{% assign isAbstract = paper.entity | sparql_query: "select ?entity { ?entity rdf:type dw:Abstract . filter(?entity = ?resourceUri) }" %}
-{% if isKeynote.first %}
+{%- assign isKeynote = paper.entity | sparql_query: "select ?entity { ?entity rdf:type dw:Keynote . filter(?entity = ?resourceUri) }" -%}
+{%- assign isInvited = paper.entity | sparql_query: "select ?entity { ?entity rdf:type dw:InvitedPaper . filter(?entity = ?resourceUri) }" -%}
+{%- assign isShort = paper.entity | sparql_query: "select ?entity { ?entity rdf:type dw:ShortPaper . filter(?entity = ?resourceUri) }" -%}
+{%- assign isAbstract = paper.entity | sparql_query: "select ?entity { ?entity rdf:type dw:Abstract . filter(?entity = ?resourceUri) }" -%}
+{%- if isKeynote.first -%}
 {%- assign track = " (keynote)" -%}
-{% elsif isInvited.first %}
+{%- elsif isInvited.first -%}
 {%- assign track = " (invited paper)" -%}
-{% elsif isAbstract.first %}
+{%- elsif isAbstract.first -%}
 {%- assign track = " (abstract)" -%}
-{% elsif isShort.first %}
+{%- elsif isShort.first -%}
 {%- assign track = " (short paper)" -%}
-{% endif %}
+{%- endif -%}
+{%- if exclude -%}
+{%- assign track = track | append: " (invited talk)" -%}
+{%- endif -%}
 {%- capture language_query -%}
 select ?label {
   ?resourceUri schema:availableLanguage ?language .
@@ -399,11 +413,15 @@ select ?label {
 {%- endcapture -%}
 {% assign language_res = paper.entity | sparql_query: language_query %}
 {% if language_res.first %}
-hallo
 {%- assign language = " (" | append: language_res.first.label | append: ")" -%}
 {% endif %}
-<li id="paper5"><a href="paper5.pdf">
+{% unless exclude %}
+<li id="{{paper_id}}"><a href="{{paper_id}}.pdf">
 <span class="CEURTITLE">{{CEURTITLE | umlaut_escape}}{{track}}</span></a>{{language}}
+{% else %}
+<li>
+{{CEURTITLE | umlaut_escape}}{{track}}{{language}}
+{% endunless %}
 {%- comment -%}<span class="CEURPAGES">{{CEURPAGES}}</span>{%- endcomment -%}
 <br>
 {%- for author in authors -%}
