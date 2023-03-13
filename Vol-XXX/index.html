@@ -219,10 +219,12 @@ co-located with {{colocated_label}} (<span class="CEURCOLOCATED">{{CEURCOLOCATED
 
 <br>
 <b> Edited by </b>
+{%- if development -%}
 <p>
-
-{% if development %}<pre># use full names, but omit any academic title</pre>{% endif %}
-</p><h3>
+<pre># use full names, but omit any academic title</pre>
+</p>
+{% endif %}
+<h3>
 {%- assign affiliations = "" -%}
 {%- assign affiliation_counter = 0 -%}
 {%- for editor in editors -%}
