@@ -19,5 +19,5 @@ exclude:
   - Gemfile
   - Gemfile.lock
 jekyll_rdf:
-  restriction: "SELECT ?resourceUri WHERE { ?resourceUri ?p ?o . FILTER regex(str(?resourceUri), \"^http://dataweek.de/d2r2-22/\") }"
+  restriction: "SELECT ?resourceUri WHERE { ?resourceUri ?p ?o . FILTER regex(str(?resourceUri), \"^https://dataweek.de/d2r2-22/\") }"
   path: "graph.ttl"
