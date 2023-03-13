@@ -4,6 +4,8 @@ url: "https://dataweek.de"
 rootResource: "<https://dataweek.de/d2r2-22/>"
 development: true
 language: en
+otherlanguage: de
+correspondingEditor: Natanael Arndt
 
 # Build settings
 timezone: Europe/Berlin
