@@ -102,6 +102,7 @@ select distinct ?entity {
 {%- assign CEURACCEPTEDPAPERS = workshop | rdf_property: "ceur:acceptedpapers" -%}
 {%- assign CEURACCEPTEDREGULARPAPERS = workshop | rdf_property: "ceur:acceptedregularpapers" -%}
 {%- assign CEURACCEPTEDSHORTPAPERS = workshop | rdf_property: "ceur:acceptedshortpapers" -%}
+{%- assign invited_papers = workshop | rdf_property: "ceur:invitedpapers" -%}
 <!DOCTYPE html>
 <!-- CEURVERSION=2020-07-09 -->
 <html lang="en">
@@ -321,6 +322,9 @@ Summary: There were <span class="CEURSUBMITTEDPAPERS">{{CEURSUBMITTEDPAPERS}}</s
 <span class="CEURACCEPTEDPAPERS">{{CEURACCEPTEDPAPERS}}</span> papers were accepted for this volume,
 <span class="CEURACCEPTEDREGULARPAPERS">{{CEURACCEPTEDREGULARPAPERS}}</span> as regular papers and
 <span class="CEURACCEPTEDSHORTPAPERS">{{CEURACCEPTEDSHORTPAPERS}}</span> as short papers.
+{%- if invited_papers %}
+Further, {{invited_papers}} invited papers are included in the proceedings.
+{%- endif -%}
 </li>
 </ul>
 <BR>
