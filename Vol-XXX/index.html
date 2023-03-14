@@ -320,10 +320,10 @@ co-located with {{colocated_label}} (<span class="CEURCOLOCATED">{{CEURCOLOCATED
 <A href="xpreface.pdf">Preface</A><BR>
 Summary: There were <span class="CEURSUBMITTEDPAPERS">{{CEURSUBMITTEDPAPERS}}</span> papers submitted for peer-review to this workshop. Out of these,
 <span class="CEURACCEPTEDPAPERS">{{CEURACCEPTEDPAPERS}}</span> papers were accepted for this volume,
-<span class="CEURACCEPTEDREGULARPAPERS">{{CEURACCEPTEDREGULARPAPERS}}</span> as regular papers and
-<span class="CEURACCEPTEDSHORTPAPERS">{{CEURACCEPTEDSHORTPAPERS}}</span> as short papers.
+<span class="CEURACCEPTEDREGULARPAPERS">{{CEURACCEPTEDREGULARPAPERS}}</span> as regular papers{%- unless invited_papers %} and{% else %}, {% endunless -%}
+<span class="CEURACCEPTEDSHORTPAPERS">{{CEURACCEPTEDSHORTPAPERS}}</span> as short papers{%- unless invited_papers %}.{% else %}, and {% endunless -%}
 {%- if invited_papers %}
-Further, {{invited_papers}} invited papers are included in the proceedings.
+{{invited_papers}} as invited papers.
 {%- endif -%}
 </li>
 </ul>

@@ -79,7 +79,7 @@ We invite contributions of novel results and ongoing work as well as position pa
     vivo:hasProceedings <https://dataweek.de/d2r2-22/#proceedings> ;
     ceur:acronym "D2R2" ;
     ceur:submittedpapers 16 ;
-    ceur:acceptedpapers 8 ;
+    ceur:acceptedpapers 11 ;
     ceur:acceptedregularpapers 6 ;
     ceur:acceptedshortpapers 2 ;
     ceur:invitedpapers 3 ;
@@ -89,8 +89,8 @@ We invite contributions of novel results and ongoing work as well as position pa
 
 <https://dataweek.de/d2r2-22/#proceedings> a foaf:Document, bibo:Proceedings ;
   dct:language <http://lexvo.org/id/iso639-3/eng> ;
-  dct:issued "2023-03-08"^^xsd:date ;
-  dct:dateSubmitted "2023-03-08"^^xsd:date ;
+  dct:issued "2023-03-14"^^xsd:date ;
+  dct:dateSubmitted "2023-03-14"^^xsd:date ;
   dct:dateCopyrighted "2022-12-23"^^xsd:date ;
   ceur:voltitle "Data-driven Resilience Research 2022"@en .
 
