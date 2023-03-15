@@ -244,7 +244,7 @@ co-located with {{colocated_label}} (<span class="CEURCOLOCATED">{{CEURCOLOCATED
 {% for i in range -%}*{%- endfor -%}
 {%- capture new_affiliation -%}
 {%- for i in range -%}*{%- endfor %} {% include affiliation.html affiliation=voleditor_affiliation %}<br>
-{%- endcapture -%}
+{% endcapture -%}
 {%- assign affiliations = affiliations | append: new_affiliation -%}
 {%- endif -%}
 {% if voleditor_member %}
@@ -253,10 +253,10 @@ co-located with {{colocated_label}} (<span class="CEURCOLOCATED">{{CEURCOLOCATED
 {% for i in range -%}*{%- endfor -%}
 {%- capture new_affiliation -%}
 {%- for i in range -%}*{%- endfor %} {% include affiliation.html affiliation=voleditor_member %}<br>
-{%- endcapture -%}
+{% endcapture -%}
 {%- assign affiliations = affiliations | append: new_affiliation -%}
 {%- endif -%}<br>
-{%- endfor -%}
+{% endfor -%}
 
 </h3>
 
