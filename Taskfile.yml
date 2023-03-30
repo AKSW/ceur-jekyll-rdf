@@ -65,19 +65,19 @@ tasks:
       - rapper -c -i turtle graph.ttl
 
   graph:
-    desc: Get the program from cmem and join it with the event graph
+    desc: Join the event.ttl and paper.ttl graphs to the graph.ttl which is used to build the site
     cmds:
       - cat event.ttl paper.ttl | rapper -i turtle -o turtle - https://dataweek.de/d2r2-22/ > graph.ttl
 
   graph:check:
-    desc: Get the program from cmem and join it with the event graph
+    desc: Check all graph files
     cmds:
       - rapper -i turtle -c event.ttl
       - rapper -i turtle -c paper.ttl
       - rapper -i turtle -c graph.ttl
 
   graph:get-program:
-    desc: Get the program from cmem and join it with the event graph
+    desc: Get the program from cmem and join it with the event graph (you need the correct credentials for that)
     cmds:
       - cmemc -c aksw.eccenca.dev workflow execute --wait D2R222_27c8844a9d9959b5:238cc3fb-389b-439c-9b7b-d492305db2d3_ProgrammTransformation
       - cmemc -c aksw.eccenca.dev graph export https://dataweek.de/d2r2-22/ | rapper -i turtle -o turtle - https://dataweek.de/d2r2-22/ > paper.ttl
