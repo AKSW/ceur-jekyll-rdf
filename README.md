@@ -7,7 +7,7 @@ In the current setup it is configured for the Proceedings of the [D2R2'22 Worksh
 
 ### Requirements
 - [Task](https://taskfile.dev/#/)
-- Docker oder Podman
+- Docker or Podman
 - Python
 - [Rapper](https://librdf.org/raptor/)
 - [tidy](https://github.com/htacg/tidy-html5/) (optional)
