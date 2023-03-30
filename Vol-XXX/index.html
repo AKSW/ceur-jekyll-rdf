@@ -46,6 +46,7 @@ CEURACCEPTEDSHORTPAPERS: the number of short accepted peer-reviewed papers  (opt
 {%- assign JJJJ = proceedings | rdf_property: "dct:dateCopyrighted" | date: "%Y" -%}
 {%- assign YYYY = workshop | rdf_property: "dct:date" | date: "%Y" -%}
 {%- assign NNNN = workshop | rdf_property: "ceur:acronym" -%}
+{%- assign YYYY_submitted = proceedings | rdf_property: "dct:dateSubmitted" | date: "%Y" -%}
 {%- assign DD = proceedings | rdf_property: "dct:dateSubmitted" | date: "%d" -%}
 {%- assign MM = proceedings | rdf_property: "dct:dateSubmitted" | date: "%m" -%}
 
@@ -438,7 +439,7 @@ select ?label {
 
 <hr>
 <span class="unobtrusive">
-{{YYYY}}-{{MM}}-{{DD}}: submitted by {{site.correspondingEditor}},
+{{YYYY_submitted}}-{{MM}}-{{DD}}: submitted by {{site.correspondingEditor}},
             metadata incl. bibliographic data published under <A HREF="https://creativecommons.org/publicdomain/zero/1.0/">Creative Commons CC0</A><br>
 <span class="CEURPUBDATE">yyyy-mm-dd</span>: published on CEUR Workshop Proceedings (CEUR-WS.org, ISSN 1613-0073)
 	|<a href="https://validator.w3.org/nu/?doc=http%3A%2F%2Fceur-ws.org%2FVol-XXX%2F">valid HTML5</a>|
