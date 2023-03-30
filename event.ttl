@@ -89,9 +89,9 @@ We invite contributions of novel results and ongoing work as well as position pa
 
 <https://dataweek.de/d2r2-22/#proceedings> a foaf:Document, bibo:Proceedings ;
   dct:language <http://lexvo.org/id/iso639-3/eng> ;
-  dct:issued "2023-03-14"^^xsd:date ;
-  dct:dateSubmitted "2023-03-14"^^xsd:date ;
-  dct:dateCopyrighted "2022-12-23"^^xsd:date ;
+  dct:issued "2023-03-30"^^xsd:date ;
+  dct:dateSubmitted "2023-03-30"^^xsd:date ;
+  dct:dateCopyrighted "2023-03-30"^^xsd:date ;
   ceur:voltitle "Data-driven Resilience Research 2022"@en .
 
 
