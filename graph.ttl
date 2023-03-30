@@ -369,7 +369,7 @@ We invite contributions of novel results and ongoing work as well as position pa
     a bibo:Conference, schema:Event, foaf:Document, <https://vocab.eccenca.com/di/Dataset> ;
     rdfs:label "International Workshop on Data-driven Resilience Research 2022"@de, "International Workshop on Data-driven Resilience Research 2022"@en ;
     foaf:homepage <> ;
-    ceur:acceptedpapers 8 ;
+    ceur:acceptedpapers 11 ;
     ceur:acceptedregularpapers 6 ;
     ceur:acceptedshortpapers 2 ;
     ceur:acronym "D2R2" ;
