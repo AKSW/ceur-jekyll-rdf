@@ -2,3 +2,6 @@ Gemfile.lock
 _site
 .jekyll-cache
 .vendor
+graph.ttl
+paper.ttl
+event.ttl
