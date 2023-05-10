@@ -2,7 +2,7 @@ version: '3'
 
 vars:
   JEKYLL_IMAGE: ghcr.io/aksw/jekyll-rdf:4.0.4
-  BASE_IRI: https://dataweek.de/d2r2-22/
+  BASE_IRI: '{{.BASE_IRI | default "https://dataweek.de/d2r2-22/"}}'
   WORKING_DIRECTORY: '{{.PWD}}'
   TARGET: _site
   BUILD_WATCH_FILES: find . -name '*' -not -path "./.git/*" -not -path "./.git" -not -path "./.jekyll-cache/*" -not -path "./.jekyll-cache"
