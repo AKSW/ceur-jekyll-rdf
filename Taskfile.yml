@@ -2,6 +2,8 @@ version: '3'
 
 vars:
   JEKYLL_IMAGE: ghcr.io/aksw/jekyll-rdf:4.0.4
+  RAPPER_IMAGE: docker.io/pheyvaer/raptor
+  RAPPER_CMD: docker run -i {{.RAPPER_IMAGE}}
   BASE_IRI: '{{.BASE_IRI | default "https://dataweek.de/d2r2-22/"}}'
   WORKING_DIRECTORY: '{{.PWD}}'
   TARGET: _site
@@ -63,16 +65,16 @@ tasks:
   check:graph-serialization:
     desc: Verify the graphs syntax is correct
     cmds:
-      - rapper -c -i turtle graph.ttl
+      - '{{.RAPPER_CMD}} -c -i turtle - {{.BASE_IRI}} < graph.ttl'
 
   graph:
     desc: Join the event.ttl and paper.ttl graphs to the graph.ttl which is used to build the site
     cmds:
-      - cat event.ttl paper.ttl | rapper -i turtle -o turtle - {{.BASE_IRI}} > graph.ttl
+      - cat event.ttl paper.ttl | {{.RAPPER_CMD}} -i turtle -o turtle - {{.BASE_IRI}} > graph.ttl
 
   graph:check:
     desc: Check all graph files
     cmds:
-      - rapper -i turtle -c event.ttl
-      - rapper -i turtle -c paper.ttl
-      - rapper -i turtle -c graph.ttl
+      - '{{.RAPPER_CMD}} -i turtle -c - {{.BASE_IRI}} < event.ttl'
+      - '{{.RAPPER_CMD}} -i turtle -c - {{.BASE_IRI}} < paper.ttl'
+      - '{{.RAPPER_CMD}} -i turtle -c - {{.BASE_IRI}} < graph.ttl'
