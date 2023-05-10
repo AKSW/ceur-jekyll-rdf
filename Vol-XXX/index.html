@@ -91,7 +91,9 @@ CEURACCEPTEDSHORTPAPERS: the number of short accepted peer-reviewed papers  (opt
 {%- capture subevent_query -%}
 select distinct ?entity {
   ?resourceUri schema:subEvent ?entity .
-  ?entity schema:startTime ?time .
+  optional {
+    ?entity schema:startTime ?time .
+  }
   optional {
     ?entity site:track ?track
   }
