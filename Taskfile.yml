@@ -2,6 +2,7 @@ version: '3'
 
 vars:
   JEKYLL_IMAGE: ghcr.io/aksw/jekyll-rdf:4.0.4
+  BASE_IRI: https://dataweek.de/d2r2-22/
   WORKING_DIRECTORY: '{{.PWD}}'
   TARGET: _site
   BUILD_WATCH_FILES: find . -name '*' -not -path "./.git/*" -not -path "./.git" -not -path "./.jekyll-cache/*" -not -path "./.jekyll-cache"
@@ -67,7 +68,7 @@ tasks:
   graph:
     desc: Join the event.ttl and paper.ttl graphs to the graph.ttl which is used to build the site
     cmds:
-      - cat event.ttl paper.ttl | rapper -i turtle -o turtle - https://dataweek.de/d2r2-22/ > graph.ttl
+      - cat event.ttl paper.ttl | rapper -i turtle -o turtle - {{.BASE_IRI}} > graph.ttl
 
   graph:check:
     desc: Check all graph files
@@ -80,5 +81,5 @@ tasks:
     desc: Get the program from cmem and join it with the event graph (you need the correct credentials for that)
     cmds:
       - cmemc -c aksw.eccenca.dev workflow execute --wait D2R222_27c8844a9d9959b5:238cc3fb-389b-439c-9b7b-d492305db2d3_ProgrammTransformation
-      - cmemc -c aksw.eccenca.dev graph export https://dataweek.de/d2r2-22/ | rapper -i turtle -o turtle - https://dataweek.de/d2r2-22/ > paper.ttl
+      - cmemc -c aksw.eccenca.dev graph export {{.BASE_IRI}} | rapper -i turtle -o turtle - {{.BASE_IRI}} > paper.ttl
       - task: graph
