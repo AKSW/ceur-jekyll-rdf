@@ -3,7 +3,7 @@ version: '3'
 vars:
   JEKYLL_IMAGE: ghcr.io/aksw/jekyll-rdf:4.0.4
   RAPPER_IMAGE: docker.io/pheyvaer/raptor
-  RAPPER_CMD: docker run -i {{.RAPPER_IMAGE}}
+  RAPPER_CMD: docker run --rm -i {{.RAPPER_IMAGE}}
   BASE_IRI: '{{.BASE_IRI | default "https://dataweek.de/d2r2-22/"}}'
   WORKING_DIRECTORY: '{{.PWD}}'
   TARGET: _site
